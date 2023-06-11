@@ -30,7 +30,7 @@ public class ConversorDivisa extends JFrame {
 	private void BtnAtrasActionPerformed(java.awt.event.ActionEvent evt, JFrame panel) {
 		panel.setVisible(false);
 		menu = new Menu();
-		menu.setVisible(true);
+		menu.setVisiblePanel(true);
 	}
 	
 	/**
