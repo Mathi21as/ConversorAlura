@@ -6,9 +6,12 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -21,9 +24,10 @@ public class Menu extends JFrame {
 	private ConversorByte conversorByte;
 	private JFrame panel;
 	private JPanel descripcionPane, listaConversionesPane;
-	private JPanel btnOkPane, btnCancelPane;
+	private JPanel btnOkPane, btnCancelPane, lblImgPane;
 	private JButton btnOk, btnCancel;
 	private JTextField descripcion;
+	private JLabel lblImg;
 	private Font descripcionFont;
 	private JComboBox listaConversiones;
 	
@@ -85,13 +89,26 @@ public class Menu extends JFrame {
 	}
 	
 	public void iniciarComponentes() {
+		//Imagen
+		lblImgPane= new JPanel();
+		lblImg = new JLabel();
+		lblImg.setSize(20,20);
+		Icon icon = new ImageIcon(new ImageIcon(getClass()
+				.getResource("./../resources/help-icon-22.png"))
+				.getImage()
+				.getScaledInstance(lblImg.getWidth(),lblImg.getHeight(), 0));
+		lblImg.setIcon(icon);
+		lblImgPane.add(lblImg);
+		lblImgPane.setSize(40,40);
+		lblImgPane.setLocation(50,15);
+		
 		//descripcion
 		descripcionPane = new JPanel();
-		descripcion = new JTextField("¿Que desea convertir?");
+		descripcion = new JTextField("Elija una opción para convertir:");
 		descripcionFont = new Font(
 			descripcion.getFont().getName(),
 			descripcion.getFont().getStyle(),
-			20);
+			15);
 		descripcion.setEditable(false);
 		descripcion.setBackground(getBackground());
 		descripcion.setBorder(null);
@@ -139,6 +156,7 @@ public class Menu extends JFrame {
 		btnCancelPane.setSize(90,40);
 		btnCancelPane.setLocation(200,85);
 		
+		panel.getContentPane().add(lblImgPane);
 		panel.getContentPane().add(descripcionPane);
 		panel.getContentPane().add(listaConversionesPane);
 		panel.getContentPane().add(btnOkPane);
