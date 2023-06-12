@@ -1,5 +1,6 @@
 package logic;
 
+
 public class DivisaLogic {
 	//los valores asignados a las divisas son su equivalente en pesos argentinos
 	private final double dolar = 483.37; //el valor corresponde al dolar blue, no al dolar convencional
