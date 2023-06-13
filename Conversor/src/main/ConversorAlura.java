@@ -3,6 +3,7 @@ package main;
 import javax.swing.JOptionPane;
 
 import logic.DivisaLogic;
+import logic.LongitudLogic;
 import logic.TemperaturaLogic;
 
 /**
@@ -12,134 +13,12 @@ import logic.TemperaturaLogic;
  *
  */
 
+
 public class ConversorAlura {
-	
-	public static void seleccionarTipoDeConversionDivisa (String opcion){
-		DivisaLogic divisaLogic = new DivisaLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
-		
-		switch(opcion) {
-		case "Pesos a Dolares": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f dolares",
-						divisaLogic.pesoADolar(inputValue)));
-		
-			break;
-		
-		case "Pesos a Euros": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f euros",
-						divisaLogic.pesoAEuro(inputValue)));
-		
-			break;
-		
-		case "Pesos a Libras Esterlinas": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f libras esterlinas",
-						divisaLogic.pesoALibraEsterlina(inputValue)));
-		
-			break;
-			
-		case "Pesos a Yen": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f yenes",
-						divisaLogic.pesoAYen(inputValue)));
-		
-			break;
-			
-		case "Pesos a Won Coreano": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f won coreano",
-						divisaLogic.pesoAWon(inputValue)));
-		
-			break;
-			
-		case "Dolares a Pesos": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.dolarAPeso(inputValue)));
-		
-			break;
-			
-		case "Euros a Pesos": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.euroAPeso(inputValue)));
-		
-			break;
-			
-		case "Libras Esterlinas a Pesos": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.libraEsterlinaAPeso(inputValue)));
-		
-			break;
-			
-		case "Yen a Pesos": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.yenAPeso(inputValue)));
-		
-			break;
-			
-		case "Won Coreano a Pesos": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.wonAPeso(inputValue)));
-		}
-				
-	}
-	
-	static public void seleccionarTipoDeConversionTemperatura(String opcion) {
-		TemperaturaLogic temperaturaLogic = new TemperaturaLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
-		
-		switch(opcion) {
-			case "Celsius a Farenheit": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-					"El resultado de la conversion es: %.2f  °F",
-					temperaturaLogic.conversionFarenheit(inputValue, "celsiusAFarenheit")));
-			
-				break;
-				
-			case "Farenheit a Celsius": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-					"El resultado de la conversion es: %.2f °C",
-					temperaturaLogic.conversionFarenheit(inputValue, "farenheitACelsius")));
-
-				break;
-				
-			case "Kelvin a Celsius": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-					"El resultado de la conversion es: %.2f °C",
-					temperaturaLogic.kelvinACelsius(inputValue)));
-
-				break;
-				
-			case "Celsius a Kelvin": JOptionPane.showMessageDialog(
-				null,
-				String.format(
-					"El resultado de la conversion es: %.2f K",
-					temperaturaLogic.celsiusAKelvin(inputValue)));
-			
-		}
-	}
-		
 
 	public static void main(String[] args) {
+		SeleccionarTipoConversion seleccionarTipoConversion = 
+				new SeleccionarTipoConversion();
 		String opcionesDivisas[] = {
 				"Pesos a Dolares",
 				"Pesos a Euros",
@@ -156,10 +35,22 @@ public class ConversorAlura {
 				"Celsius a Kelvin",
 				"Farenheit a Celsius",
 				"Kelvin a Celsius"};
+		String opcionesLongitud[] = {
+				"Metro a Pulgada",
+				"Metro a Pie",
+				"Metro a Yarda",
+				"Metro a Milla",
+				"Pulgada a Metro",
+				"Pie a Metro",
+				"Yarda a Metro",
+				"Milla a Metro"};
 		String opciones[] = {
 				"Conversor de divisa",
 				"Conversor de temperatura",
-				"Conversor de bit"};
+				"Conversor de longitud",
+				"Conversor de masa",
+				"Conversor de volumen",
+				"Conversor de tamano de datos"};
 		String opcion = (String) JOptionPane.showInputDialog(
 				null,
 				"Elija una opcion",
@@ -182,7 +73,7 @@ public class ConversorAlura {
 							opcionesDivisas[0]);
 					
 					if(opcion != null)
-						seleccionarTipoDeConversionDivisa(opcion);
+						seleccionarTipoConversion.divisa(opcion);
 				}
 					break;
 					
@@ -197,7 +88,22 @@ public class ConversorAlura {
 							opcionesTemperatura[0]);
 					
 					if(opcion != null)
-						seleccionarTipoDeConversionTemperatura(opcion);
+						seleccionarTipoConversion.temperatura(opcion);
+				}
+					break;
+				
+				case "Conversor de longitud": {
+					opcion = (String) JOptionPane.showInputDialog(
+							null,
+							"Elija una opcion",
+							"Menu",
+							JOptionPane.DEFAULT_OPTION,
+							null,
+							opcionesLongitud,
+							opcionesLongitud[0]);
+					
+					if(opcion != null)
+						seleccionarTipoConversion.longitud(opcion);
 				}
 					break;
 			}
