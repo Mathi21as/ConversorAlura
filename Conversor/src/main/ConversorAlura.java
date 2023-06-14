@@ -10,11 +10,32 @@ import logic.TemperaturaLogic;
  * 
  * @author Mathias Ledesma
  * @version 1.0.0
+ * 
+ * NOTA: En los switch de la clase SeleccionarTipoConversion no 
+ * coloque un caso por defecto (default) ya que no es posible que 
+ * en el uso del programa se ingrese una opcion diferente a las 
+ * pretederminadas y el default estaria de mas.
  *
  */
 
 
 public class ConversorAlura {
+	
+	static public void cerrarPrograma() {
+		if(JOptionPane.showConfirmDialog(
+				null, 
+				"Desea continuar?", 
+				"Seleccione una opcion", 
+				0
+				) == 1) {
+			JOptionPane.showMessageDialog(
+					null, 
+					"Programa terminado", 
+					"Cerrando...", 
+					1);
+			System.exit(0);
+		}
+	}
 
 	public static void main(String[] args) {
 		SeleccionarTipoConversion seleccionarTipoConversion = 
@@ -63,8 +84,7 @@ public class ConversorAlura {
 				"Conversor de temperatura",
 				"Conversor de longitud",
 				"Conversor de masa",
-				"Conversor de volumen",
-				"Conversor de tamano de datos"};
+				"Conversor de volumen"};
 		String opcion = (String) JOptionPane.showInputDialog(
 				null,
 				"Elija una opcion",
@@ -88,6 +108,8 @@ public class ConversorAlura {
 					
 					if(opcion != null)
 						seleccionarTipoConversion.divisa(opcion);
+					
+					cerrarPrograma();
 				}
 					break;
 					
@@ -103,6 +125,8 @@ public class ConversorAlura {
 					
 					if(opcion != null)
 						seleccionarTipoConversion.temperatura(opcion);
+					
+					cerrarPrograma();
 				}
 					break;
 				
@@ -118,6 +142,8 @@ public class ConversorAlura {
 					
 					if(opcion != null)
 						seleccionarTipoConversion.longitud(opcion);
+					
+					cerrarPrograma();
 				}
 					break;
 					
@@ -133,6 +159,8 @@ public class ConversorAlura {
 					
 					if(opcion != null)
 						seleccionarTipoConversion.masa(opcion);
+					
+					cerrarPrograma();
 				}
 					break;
 					
@@ -148,6 +176,8 @@ public class ConversorAlura {
 					
 					if(opcion != null)
 						seleccionarTipoConversion.volumen(opcion);
+					
+					cerrarPrograma();
 				}
 					break;
 			}

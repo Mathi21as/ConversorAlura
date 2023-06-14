@@ -11,11 +11,11 @@ public class TemperaturaLogic {
 	}
 	
 	public double celsiusAKelvin(double grados) {
-		return grados + kelvin;
+		return grados + this.kelvin;
 	}
 	
-	public double kelvinACelsius(double grados) {
-		return grados - kelvin;
+	public double kelvinACelsius(double kelvin) {
+		return kelvin - this.kelvin;
 	}
 	
 	public double conversionFarenheit(double grados, String tipoConversion) {

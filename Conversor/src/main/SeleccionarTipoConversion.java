@@ -9,140 +9,196 @@ import logic.TemperaturaLogic;
 import logic.VolumenLogic;
 
 public class SeleccionarTipoConversion {
+	
+	private Double inputValue;
+	
+	static public Double entradaYValidacion() {
+		String inputToValidate = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir:");
+		
+		if(inputToValidate.substring(0).matches("[0-9].*")) {
+			return Double.parseDouble(inputToValidate);
+		}
+		else {
+			return null;
+		}
+		
+	}
+	
 	public void divisa (String opcion){
 		DivisaLogic divisaLogic = new DivisaLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		this.inputValue = entradaYValidacion();
+		
+		if(this.inputValue == null){
+			JOptionPane.showMessageDialog(
+					null, 
+					"Valor ingresado no valido, solo se admiten numeros.", 
+					"Error", 
+					0);
+			return;
+		}
 		
 		switch(opcion) {
 		case "Pesos a Dolares": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f dolares",
-						divisaLogic.pesoADolar(inputValue)));
+						"%.2f pesos equivalen a %.2f dolares",
+						this.inputValue,
+						divisaLogic.pesoADolar(this.inputValue)));
 		
 			break;
 		
 		case "Pesos a Euros": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f euros",
-						divisaLogic.pesoAEuro(inputValue)));
+						"%.2f pesos equivalen a %.2f euros",
+						this.inputValue,
+						divisaLogic.pesoAEuro(this.inputValue)));
 		
 			break;
 		
 		case "Pesos a Libras Esterlinas": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f libras esterlinas",
-						divisaLogic.pesoALibraEsterlina(inputValue)));
+						"%.2f pesos equivalen a %.2f libras esterlinas",
+						this.inputValue,
+						divisaLogic.pesoALibraEsterlina(this.inputValue)));
 		
 			break;
 			
 		case "Pesos a Yen": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f yenes",
-						divisaLogic.pesoAYen(inputValue)));
+						"%.2f pesos equivalen a %.2f yenes",
+						this.inputValue,
+						divisaLogic.pesoAYen(this.inputValue)));
 		
 			break;
 			
 		case "Pesos a Won Coreano": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f won coreano",
-						divisaLogic.pesoAWon(inputValue)));
+						"%.2f pesos equivalen a %.2f won coreano",
+						this.inputValue,
+						divisaLogic.pesoAWon(this.inputValue)));
 		
 			break;
 			
 		case "Dolares a Pesos": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.dolarAPeso(inputValue)));
+						"%.2f dolares equivalen a %.2f pesos",
+						this.inputValue,
+						divisaLogic.dolarAPeso(this.inputValue)));
 		
 			break;
 			
 		case "Euros a Pesos": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.euroAPeso(inputValue)));
+						"%.2f euros equivalen a %.2f pesos",
+						this.inputValue,
+						divisaLogic.euroAPeso(this.inputValue)));
 		
 			break;
 			
 		case "Libras Esterlinas a Pesos": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.libraEsterlinaAPeso(inputValue)));
+						"%.2f libras esterlinas equivalen a %.2f pesos",
+						this.inputValue,
+						divisaLogic.libraEsterlinaAPeso(this.inputValue)));
 		
 			break;
 			
 		case "Yen a Pesos": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.yenAPeso(inputValue)));
+						"%.2f yenes equivalen a %.2f pesos",
+						this.inputValue,
+						divisaLogic.yenAPeso(this.inputValue)));
 		
 			break;
 			
 		case "Won Coreano a Pesos": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"El resultado de la conversion es: %.2f pesos",
-						divisaLogic.wonAPeso(inputValue)));
+						"%.2f won coreano equivalen a %.2f pesos",
+						this.inputValue,
+						divisaLogic.wonAPeso(this.inputValue)));
 		}
 				
 	}
 	
 	public void temperatura(String opcion) {
 		TemperaturaLogic temperaturaLogic = new TemperaturaLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		this.inputValue = entradaYValidacion();
+		
+		if(this.inputValue == null){
+			JOptionPane.showMessageDialog(
+					null, 
+					"Valor ingresado no valido, solo se admiten numeros.", 
+					"Error", 
+					0);
+			return;
+		}
 		
 		switch(opcion) {
 			case "Celsius a Farenheit": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-					"El resultado de la conversion es: %.2f  °F",
-					temperaturaLogic.conversionFarenheit(inputValue, "celsiusAFarenheit")));
+					"%.2f°C equivalen a %.2f°F",
+					this.inputValue,
+					temperaturaLogic.conversionFarenheit(this.inputValue, "celsiusAFarenheit")));
 			
 				break;
 				
 			case "Farenheit a Celsius": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-					"El resultado de la conversion es: %.2f °C",
-					temperaturaLogic.conversionFarenheit(inputValue, "farenheitACelsius")));
+					"%.1f°F equivalen a %.1f°C",
+					this.inputValue,
+					temperaturaLogic.conversionFarenheit(this.inputValue, "farenheitACelsius")));
 
 				break;
 				
 			case "Kelvin a Celsius": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-					"El resultado de la conversion es: %.2f °C",
-					temperaturaLogic.kelvinACelsius(inputValue)));
+					"%.1f°K equivalen a %.1f°C",
+					this.inputValue,
+					temperaturaLogic.kelvinACelsius(this.inputValue)));
 
 				break;
 				
 			case "Celsius a Kelvin": JOptionPane.showMessageDialog(
 				null,
 				String.format(
-					"El resultado de la conversion es: %.2f K",
-					temperaturaLogic.celsiusAKelvin(inputValue)));
+					"%.1f°C equivalen a %.1f°K",
+					this.inputValue,
+					temperaturaLogic.celsiusAKelvin(this.inputValue)));
 			
 		}
 	}
 	
 	public void longitud(String opcion) {
 		LongitudLogic longitudLogic = new LongitudLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		this.inputValue = entradaYValidacion();
+		
+		if(this.inputValue == null){
+			JOptionPane.showMessageDialog(
+					null, 
+					"Valor ingresado no valido, solo se admiten numeros.", 
+					"Error", 
+					0);
+			return;
+		}
 		
 		switch(opcion) {
 			case "Metro a Pulgada": JOptionPane.showMessageDialog(
 				null,
 				String.format(
 					"El resultado de la conversion es: %.2f  pulgadas",
-					longitudLogic.metroAPulgada(inputValue)));
+					longitudLogic.metroAPulgada(this.inputValue)));
 			
 				break;
 				
@@ -150,7 +206,7 @@ public class SeleccionarTipoConversion {
 				null,
 				String.format(
 					"El resultado de la conversion es: %.2f pies",
-					longitudLogic.metroAPie(inputValue)));
+					longitudLogic.metroAPie(this.inputValue)));
 
 				break;
 				
@@ -158,7 +214,7 @@ public class SeleccionarTipoConversion {
 				null,
 				String.format(
 					"El resultado de la conversion es: %.2f yardas",
-					longitudLogic.metroAYarda(inputValue)));
+					longitudLogic.metroAYarda(this.inputValue)));
 
 				break;
 				
@@ -166,13 +222,13 @@ public class SeleccionarTipoConversion {
 				null,
 				String.format(
 					"El resultado de la conversion es: %.2f millas",
-					longitudLogic.metroAMilla(inputValue)));
+					longitudLogic.metroAMilla(this.inputValue)));
 			
 			case "Pulgada a Metro": JOptionPane.showMessageDialog(
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f metros",
-						longitudLogic.pulgadaAMetro(inputValue)));
+						longitudLogic.pulgadaAMetro(this.inputValue)));
 
 					break;
 			
@@ -180,7 +236,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f metros",
-						longitudLogic.pieAMetro(inputValue)));
+						longitudLogic.pieAMetro(this.inputValue)));
 
 					break;
 					
@@ -188,7 +244,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f metros",
-						longitudLogic.yardaAMetro(inputValue)));
+						longitudLogic.yardaAMetro(this.inputValue)));
 
 					break;
 					
@@ -196,21 +252,30 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f metros",
-						longitudLogic.millaAMetro(inputValue)));
+						longitudLogic.millaAMetro(this.inputValue)));
 
 		}
 	}
 	
 	public void masa(String opcion) {
 		MasaLogic masaLogic = new MasaLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		this.inputValue = entradaYValidacion();
+		
+		if(this.inputValue == null){
+			JOptionPane.showMessageDialog(
+					null, 
+					"Valor ingresado no valido, solo se admiten numeros.", 
+					"Error", 
+					0);
+			return;
+		}
 		
 		switch(opcion) {
 			case "Kilogramo a Libra": JOptionPane.showMessageDialog(
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f libras",
-						masaLogic.kilogramoALibra(inputValue)));
+						masaLogic.kilogramoALibra(this.inputValue)));
 			
 				break;
 				
@@ -218,7 +283,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f onzas",
-						masaLogic.kilogramoAOnza(inputValue)));
+						masaLogic.kilogramoAOnza(this.inputValue)));
 			
 				break;
 				
@@ -226,7 +291,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f toneladas",
-						masaLogic.kilogramoATonelada(inputValue)));
+						masaLogic.kilogramoATonelada(this.inputValue)));
 			
 				break;
 				
@@ -234,7 +299,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f kilogramos",
-						masaLogic.libraAKilogramo(inputValue)));
+						masaLogic.libraAKilogramo(this.inputValue)));
 			
 				break;
 				
@@ -242,7 +307,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f kilogramos",
-						masaLogic.onzaAKilogramo(inputValue)));
+						masaLogic.onzaAKilogramo(this.inputValue)));
 			
 				break;
 				
@@ -250,7 +315,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f kilogramos",
-						masaLogic.toneladaAKilogramo(inputValue)));
+						masaLogic.toneladaAKilogramo(this.inputValue)));
 			
 				break;
 		}
@@ -258,14 +323,23 @@ public class SeleccionarTipoConversion {
 	
 	public void volumen(String opcion) {
 		VolumenLogic volumenLogic = new VolumenLogic();
-		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		this.inputValue = entradaYValidacion();
+		
+		if(this.inputValue == null){
+			JOptionPane.showMessageDialog(
+					null, 
+					"Valor ingresado no valido, solo se admiten numeros.", 
+					"Error", 
+					0);
+			return;
+		}
 		
 		switch(opcion) {
 			case "Litro a Galon": JOptionPane.showMessageDialog(
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f galones",
-						volumenLogic.litroAGalon(inputValue)));
+						volumenLogic.litroAGalon(this.inputValue)));
 			
 				break;
 			
@@ -273,7 +347,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f cuartos",
-						volumenLogic.litroACuarto(inputValue)));
+						volumenLogic.litroACuarto(this.inputValue)));
 			
 				break;
 		
@@ -281,7 +355,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f pies cubicos",
-						volumenLogic.litroAPieCubico(inputValue)));
+						volumenLogic.litroAPieCubico(this.inputValue)));
 			
 				break;
 				
@@ -289,7 +363,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f litros",
-						volumenLogic.galonALitro(inputValue)));
+						volumenLogic.galonALitro(this.inputValue)));
 			
 				break;
 				
@@ -297,7 +371,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f litros",
-						volumenLogic.cuartoALitro(inputValue)));
+						volumenLogic.cuartoALitro(this.inputValue)));
 			
 				break;
 				
@@ -305,7 +379,7 @@ public class SeleccionarTipoConversion {
 					null,
 					String.format(
 						"El resultado de la conversion es: %.2f litros",
-						volumenLogic.pieCubicoALitro(inputValue)));
+						volumenLogic.pieCubicoALitro(this.inputValue)));
 			
 		}
 	}
