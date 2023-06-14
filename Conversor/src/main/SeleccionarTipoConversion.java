@@ -4,7 +4,9 @@ import javax.swing.JOptionPane;
 
 import logic.DivisaLogic;
 import logic.LongitudLogic;
+import logic.MasaLogic;
 import logic.TemperaturaLogic;
+import logic.VolumenLogic;
 
 public class SeleccionarTipoConversion {
 	public void divisa (String opcion){
@@ -198,4 +200,114 @@ public class SeleccionarTipoConversion {
 
 		}
 	}
+	
+	public void masa(String opcion) {
+		MasaLogic masaLogic = new MasaLogic();
+		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		
+		switch(opcion) {
+			case "Kilogramo a Libra": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f libras",
+						masaLogic.kilogramoALibra(inputValue)));
+			
+				break;
+				
+			case "Kilogramo a Onza": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f onzas",
+						masaLogic.kilogramoAOnza(inputValue)));
+			
+				break;
+				
+			case "Kilogramo a Tonelada": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f toneladas",
+						masaLogic.kilogramoATonelada(inputValue)));
+			
+				break;
+				
+			case "Libra a Kilogramo": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f kilogramos",
+						masaLogic.libraAKilogramo(inputValue)));
+			
+				break;
+				
+			case "Onza a Kilogramo": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f kilogramos",
+						masaLogic.onzaAKilogramo(inputValue)));
+			
+				break;
+				
+			case "Tonelada a Kilogramo": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f kilogramos",
+						masaLogic.toneladaAKilogramo(inputValue)));
+			
+				break;
+		}
+	}
+	
+	public void volumen(String opcion) {
+		VolumenLogic volumenLogic = new VolumenLogic();
+		Double inputValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el numero a convertir"));
+		
+		switch(opcion) {
+			case "Litro a Galon": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f galones",
+						volumenLogic.litroAGalon(inputValue)));
+			
+				break;
+			
+			case "Litro a Cuarto": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f cuartos",
+						volumenLogic.litroACuarto(inputValue)));
+			
+				break;
+		
+			case "Litro a Pie cubico": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f pies cubicos",
+						volumenLogic.litroAPieCubico(inputValue)));
+			
+				break;
+				
+			case "Galon a Litro": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f litros",
+						volumenLogic.galonALitro(inputValue)));
+			
+				break;
+				
+			case "Cuartos a Litro": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f litros",
+						volumenLogic.cuartoALitro(inputValue)));
+			
+				break;
+				
+			case "Pie cubico a Litro": JOptionPane.showMessageDialog(
+					null,
+					String.format(
+						"El resultado de la conversion es: %.2f litros",
+						volumenLogic.pieCubicoALitro(inputValue)));
+			
+		}
+	}
+	
 }
