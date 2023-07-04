@@ -7,6 +7,19 @@ public class MasaLogic {
 	ingles, use la equivalencia internacional*/
 	private final double tonelada = 1000.0;
 	
+	private static MasaLogic instance;
+	
+	private MasaLogic() {
+		
+	}
+	
+	public static MasaLogic getInstance() {
+		if(instance == null)
+			instance = new MasaLogic();
+		
+		return instance;
+	}
+	
 	public double kilogramoALibra(double kilogramo) {
 		return kilogramo / libra;
 	}

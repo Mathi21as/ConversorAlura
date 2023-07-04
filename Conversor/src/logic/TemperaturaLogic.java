@@ -10,6 +10,19 @@ public class TemperaturaLogic {
 				(c - 32) / 1.8;
 	}
 	
+	private static TemperaturaLogic instance;
+	
+	private TemperaturaLogic() {
+		
+	}
+	
+	public static TemperaturaLogic getInstance() {
+		if(instance == null) 
+			instance = new TemperaturaLogic();
+		
+		return instance;
+	}
+	
 	public double celsiusAKelvin(double grados) {
 		return grados + this.kelvin;
 	}

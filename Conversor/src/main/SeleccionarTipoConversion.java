@@ -25,7 +25,7 @@ public class SeleccionarTipoConversion {
 	}
 	
 	public void divisa (String opcion){
-		DivisaLogic divisaLogic = new DivisaLogic();
+		DivisaLogic divisaLogic = DivisaLogic.getInstance();
 		this.inputValue = entradaYValidacion();
 		
 		if(this.inputValue == null){
@@ -130,7 +130,7 @@ public class SeleccionarTipoConversion {
 	}
 	
 	public void temperatura(String opcion) {
-		TemperaturaLogic temperaturaLogic = new TemperaturaLogic();
+		TemperaturaLogic temperaturaLogic = TemperaturaLogic.getInstance();
 		this.inputValue = entradaYValidacion();
 		
 		if(this.inputValue == null){
@@ -181,7 +181,7 @@ public class SeleccionarTipoConversion {
 	}
 	
 	public void longitud(String opcion) {
-		LongitudLogic longitudLogic = new LongitudLogic();
+		LongitudLogic longitudLogic = LongitudLogic.getInstance();
 		this.inputValue = entradaYValidacion();
 		
 		if(this.inputValue == null){
@@ -258,7 +258,7 @@ public class SeleccionarTipoConversion {
 	}
 	
 	public void masa(String opcion) {
-		MasaLogic masaLogic = new MasaLogic();
+		MasaLogic masaLogic = MasaLogic.getInstance();
 		this.inputValue = entradaYValidacion();
 		
 		if(this.inputValue == null){
@@ -322,7 +322,7 @@ public class SeleccionarTipoConversion {
 	}
 	
 	public void volumen(String opcion) {
-		VolumenLogic volumenLogic = new VolumenLogic();
+		VolumenLogic volumenLogic = VolumenLogic.getInstance();
 		this.inputValue = entradaYValidacion();
 		
 		if(this.inputValue == null){

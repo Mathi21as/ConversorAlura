@@ -9,6 +9,19 @@ public class DivisaLogic {
 	private final double yen = 1.76;
 	private final double won = 0.19;
 	
+	private static DivisaLogic instance;
+	
+	private DivisaLogic() {
+		
+	}
+	
+	public static DivisaLogic getInstance() {
+		if(instance == null) 
+			instance = new DivisaLogic();
+		
+		return instance;
+	}
+	
 	//Funciones para convertir de pesos a otra divisa
 	public double pesoADolar(double pesos) {
 		return pesos/dolar;

@@ -6,6 +6,19 @@ public class LongitudLogic {
 	private final double yarda = 0.9144;
 	private final double milla = 1609.0;
 	
+	private static LongitudLogic instance;
+	
+	private LongitudLogic() {
+		
+	}
+	
+	public static LongitudLogic getInstance() {
+		if(instance == null)
+			instance = new LongitudLogic();
+		
+		return instance;
+	}
+	
 	public double metroAPulgada(double metros) {
 		return metros / pulgada;
 	}

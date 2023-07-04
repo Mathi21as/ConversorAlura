@@ -5,6 +5,19 @@ public class VolumenLogic {
 	private final double cuarto = 0.946;
 	private final double pieCubico = 28.32;
 	
+	private static VolumenLogic instance;
+	
+	private VolumenLogic() {
+		
+	}
+	
+	public static VolumenLogic getInstance() {
+		if(instance == null)
+			instance = new VolumenLogic();
+		
+		return instance;
+	}
+	
 	public double litroAGalon(double litro) {
 		return litro / galon;
 	}
