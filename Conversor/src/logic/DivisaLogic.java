@@ -3,11 +3,11 @@ package logic;
 
 public class DivisaLogic {
 	//los valores asignados a las divisas son su equivalente en pesos argentinos
-	private final double dolar = 483.37; //el valor corresponde al dolar blue, no al dolar convencional
-	private final double euro = 263.34;
-	private final double libraEsterlina = 307.92;
-	private final double yen = 1.76;
-	private final double won = 0.19;
+	private final Double dolar = 483.37; //el valor corresponde al dolar blue, no al dolar convencional
+	private final Double euro = 263.34;
+	private final Double libraEsterlina = 307.92;
+	private final Double yen = 1.84;
+	private final Double won = 0.19;
 	
 	private static DivisaLogic instance;
 	
@@ -63,4 +63,107 @@ public class DivisaLogic {
 	public double wonAPeso(double divisa) {
 		return divisa*won;
 	}
+	
+	public Double pesoAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return Double.valueOf(valor/dolar);
+				
+			case "EUR": return Double.valueOf(valor/euro);
+				
+			case "GBP": return Double.valueOf(valor/libraEsterlina);
+				
+			case "JPY": return Double.valueOf(valor/yen);
+			
+			case "KRW": return Double.valueOf(valor/won);
+			
+			case "ARS": return valor;
+		}
+		return null;
+	}
+	
+	public Double dolarAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return valor;
+				
+			case "EUR": return Double.valueOf(valor/euro);
+				
+			case "GBP": return Double.valueOf((valor*dolar)/libraEsterlina);
+				
+			case "JPY": return Double.valueOf((valor*dolar)/yen);
+			
+			case "KRW": return Double.valueOf((valor*dolar)/won);
+			
+			case "ARS": return Double.valueOf(valor*dolar);
+		}
+		return null;
+	}
+	
+	public Double euroAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return Double.valueOf((valor*euro)/dolar);
+				
+			case "EUR": return valor;
+				
+			case "GBP": return Double.valueOf((valor*euro)/libraEsterlina);
+				
+			case "JPY": return Double.valueOf((valor*euro)/yen);
+			
+			case "KRW": return Double.valueOf((valor*euro)/won);
+			
+			case "ARS": return Double.valueOf(valor*euro);
+		}
+		return null;
+	}
+	
+	public Double libraAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return Double.valueOf((valor*libraEsterlina)/dolar);
+				
+			case "EUR": return Double.valueOf((valor*libraEsterlina)/euro);
+				
+			case "GBP": return valor;
+				
+			case "JPY": return Double.valueOf((valor*libraEsterlina)/yen);
+			
+			case "KRW": return Double.valueOf((valor*libraEsterlina)/won);
+			
+			case "ARS": return Double.valueOf(valor*libraEsterlina);
+		}
+		return null;
+	}
+	
+	public Double yenAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return Double.valueOf((valor*yen)/dolar);
+				
+			case "EUR": return Double.valueOf((valor*yen)/euro);
+				
+			case "GBP": return Double.valueOf((valor*yen)/libraEsterlina);
+				
+			case "JPY": return valor;
+			
+			case "KRW": return Double.valueOf((valor*yen)/won);
+			
+			case "ARS": return Double.valueOf(valor*yen);
+		}
+		return null;
+	}
+	
+	public Double wonAOtraDivisa(String divisa, Double valor) {
+		switch(divisa) {
+			case "USD": return Double.valueOf((valor*won)/dolar);
+				
+			case "EUR": return Double.valueOf((valor*won)/euro);
+				
+			case "GBP": return Double.valueOf((valor*won)/libraEsterlina);
+				
+			case "JPY": return Double.valueOf((valor*won)/yen);
+			
+			case "KRW": return valor;
+			
+			case "ARS": return Double.valueOf(valor*won);
+		}
+		return null;
+	}
+	
 }

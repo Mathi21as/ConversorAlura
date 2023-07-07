@@ -53,9 +53,10 @@ public class MainWindow {
 	private void initialize() {
 		frame = new JFrame("Conversor Alura");
 		frame.getContentPane().setForeground(Color.WHITE);
-		frame.setBounds(100, 100, 814, 501);
+		frame.setBounds(0, 0, 814, 501);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setBackground(new Color(0,0,0,200));
+		frame.getContentPane().setBackground(new Color(0,0,0));
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0,0,0,000));
 		

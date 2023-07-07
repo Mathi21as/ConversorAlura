@@ -95,7 +95,7 @@ public class PanelTemperatura {
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
 				+ "UI Conversor ALura\\"
-				+ "primer-plano-termometro-que-muestra-temperatura-alta.jpg"));
+				+ "primer-plano-termometro-que-muestra-temperatura-alta.png"));
 		panel_temperatura.add(lblBackgroundImg);
 		
 		return panel_temperatura;

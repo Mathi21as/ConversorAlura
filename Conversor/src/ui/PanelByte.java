@@ -99,7 +99,7 @@ public class PanelByte {
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
 				+ "UI Conversor ALura\\"
-				+ "byte.jpg"));
+				+ "byte.png"));
 		panel_byte.add(lblBackgroundImg);
 		
 		return panel_byte;

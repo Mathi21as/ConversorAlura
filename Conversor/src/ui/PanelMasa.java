@@ -97,7 +97,7 @@ public class PanelMasa {
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
 				+ "UI Conversor ALura\\"
-				+ "masa.jpg"));
+				+ "masa.png"));
 		panel_masa.add(lblBackgroundImg);
 		
 		return panel_masa;

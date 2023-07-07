@@ -97,7 +97,7 @@ private static JPanel panel_volumen = new JPanel();
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
 				+ "UI Conversor ALura\\"
-				+ "volumen.jpg"));
+				+ "volumen.png"));
 		panel_volumen.add(lblBackgroundImg);
 		
 		return panel_volumen;

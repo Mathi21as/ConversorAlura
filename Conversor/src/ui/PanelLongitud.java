@@ -99,7 +99,7 @@ public class PanelLongitud {
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
 				+ "UI Conversor ALura\\"
-				+ "longitud1.jpg"));
+				+ "longitud.png"));
 		panel_longitud.add(lblBackgroundImg);
 		
 		return panel_longitud;

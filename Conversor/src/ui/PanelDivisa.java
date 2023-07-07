@@ -100,7 +100,7 @@ public class PanelDivisa {
 		lblBackgroundImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
 		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\divisa.jpg"));
+				+ "UI Conversor ALura\\divisa.png"));
 		panel_divisa.add(lblBackgroundImg);
 		
 		return panel_divisa;
