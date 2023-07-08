@@ -1,10 +1,10 @@
 package logic;
 
 public class LongitudLogic {
-	private final double pulgada = 0.0254;
-	private final double pie = 0.3048;
-	private final double yarda = 0.9144;
-	private final double milla = 1609.0;
+	private final Double pulgada = 0.0254;
+	private final Double pie = 0.3048;
+	private final Double yarda = 0.9144;
+	private final Double milla = 1609.0;
 	
 	private static LongitudLogic instance;
 	
@@ -50,4 +50,80 @@ public class LongitudLogic {
 	public double millaAMetro(double milla) {
 		return milla * this.milla;
 	}
+	
+	public Double metroAOtraLongitud(String longitud, Double valor) {
+		switch(longitud) {
+			case "Metro" : return valor;
+			
+			case "Pulgada": return Double.valueOf(valor/pulgada);
+			
+			case "Pie": return Double.valueOf(valor/pie);
+			
+			case "Yarda": return Double.valueOf(valor/yarda);
+			
+			case "Milla": return Double.valueOf(valor/milla);
+		}
+		return null;
+	}
+	
+	public Double pulgadaAOtraLongitud(String longitud, Double valor) {
+		switch(longitud) {
+			case "Metro" : return Double.valueOf(valor * pulgada);
+			
+			case "Pulgada": return valor;
+			
+			case "Pie": return Double.valueOf((valor*pulgada)/pie);
+			
+			case "Yarda": return Double.valueOf((valor*pulgada)/yarda);
+			
+			case "Milla": return Double.valueOf((valor*pulgada)/milla);
+		}
+		return null;
+	}
+	
+	public Double pieAOtraLongitud(String longitud, Double valor) {
+		switch(longitud) {
+			case "Metro" : return valor * pie;
+			
+			case "Pulgada": return Double.valueOf((valor*pie)/pulgada);
+			
+			case "Pie": return valor;
+			
+			case "Yarda": return Double.valueOf((valor*pie)/yarda);
+			
+			case "Milla": return Double.valueOf((valor*pie)/milla);
+		}
+		return null;
+	}
+	
+	public Double yardaAOtraLongitud(String longitud, Double valor) {
+		switch(longitud) {
+			case "Metro" : return valor * yarda;
+			
+			case "Pulgada": return Double.valueOf((valor*yarda)/pulgada);
+			
+			case "Pie": return Double.valueOf((valor*yarda)/pie);
+			
+			case "Yarda": return valor;
+			
+			case "Milla": return Double.valueOf((valor*yarda)/milla);
+		}
+		return null;
+	}
+	
+	public Double millaAOtraLongitud(String longitud, Double valor) {
+		switch(longitud) {
+			case "Metro" : return valor * milla;
+			
+			case "Pulgada": return Double.valueOf((valor*milla)/pulgada);
+			
+			case "Pie": return Double.valueOf((valor*milla)/pie);
+			
+			case "Yarda": return Double.valueOf((valor*milla)/yarda);
+			
+			case "Milla": return valor;
+		}
+		return null;
+	}
+	
 }

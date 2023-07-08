@@ -55,6 +55,7 @@ public class MainWindow {
 		frame.getContentPane().setForeground(Color.WHITE);
 		frame.setBounds(0, 0, 814, 501);
 		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
 		JPanel panel = new JPanel();
