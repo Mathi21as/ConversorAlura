@@ -15,6 +15,7 @@ public class PanelByte {
 	private static JPanel panel_byte = new JPanel();
 	
 	public static JPanel panel() {
+		panel_byte.setBounds(0,80,796,426);
 		panel_byte.setLayout(null);
 		panel_byte.setVisible(false);	
 		

@@ -15,6 +15,7 @@ public class PanelVolumen {
 private static JPanel panel_volumen = new JPanel();
 	
 	public static JPanel panel() {
+		panel_volumen.setBounds(0,80,796,426);
 		panel_volumen.setLayout(null);
 		panel_volumen.setVisible(false);	
 		

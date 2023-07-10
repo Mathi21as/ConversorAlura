@@ -15,6 +15,7 @@ public class PanelTemperatura {
 	private static JPanel panel_temperatura = new JPanel();
 	
 	public static JPanel panel() {
+		panel_temperatura.setBounds(0,80,796,426);
 		panel_temperatura.setLayout(null);
 		panel_temperatura.setVisible(false);	
 		

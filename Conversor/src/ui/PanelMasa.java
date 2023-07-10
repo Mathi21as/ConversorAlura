@@ -15,6 +15,7 @@ public class PanelMasa {
 	private static JPanel panel_masa = new JPanel();
 	
 	public static JPanel panel() {
+		panel_masa.setBounds(0,80,796,426);
 		panel_masa.setLayout(null);
 		panel_masa.setVisible(false);	
 		

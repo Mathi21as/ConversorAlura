@@ -2,9 +2,9 @@ package logic;
 
 
 public class TemperaturaLogic {
-	private final double kelvin = 273.15;
-	private double farenheit(double c, String tipo) {
-		return tipo == "celsiusAFarenheit" ? 
+	private final Double kelvin = 273.15;
+	private Double farenheit(Double c, String tipo) {
+		return tipo == "Farenheit" ? 
 				c * 1.8 + 32 
 				: 
 				(c - 32) / 1.8;
@@ -31,7 +31,41 @@ public class TemperaturaLogic {
 		return kelvin - this.kelvin;
 	}
 	
-	public double conversionFarenheit(double grados, String tipoConversion) {
-		return farenheit(grados, tipoConversion);
+	public Double conversionFarenheit(Double grados, String temperatura) {
+		return farenheit(grados, temperatura);
 	}
+	
+	public Double celsiusAOtraTemperatura(String temperatura, Double valor) {
+		switch(temperatura) {
+			case "Celsius (°C)": return valor;
+			
+			case "Farenheit (°F)": return valor * 1.8 + 32;
+				
+			case "Kelvin (K)": return valor + kelvin;
+		}
+		return null;
+	}
+	
+	public Double farenheitAOtraTemperatura(String temperatura, Double valor) {
+		switch(temperatura) {
+			case "Celsius (°C)": return (valor - 32) / 1.8;
+			
+			case "Farenheit (°F)": return valor;
+				
+			case "Kelvin (K)": return (valor - 32) / 1.8 + kelvin;
+		}
+		return null;
+	}
+	
+	public Double kelvinAOtraTemperatura(String temperatura, Double valor) {
+		switch(temperatura) {
+			case "Celsius (°C)": return kelvin - valor;
+			
+			case "Farenheit (°F)": return (valor - kelvin) * 1.8 + 32;
+				
+			case "Kelvin (K)": return valor;
+		}
+		return null;
+	}
+ 
 }

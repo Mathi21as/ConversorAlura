@@ -2,6 +2,8 @@ package ui;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,10 +13,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import controller.ConversionController;
+
 public class PanelDivisa {
+	private static ConversionController sendData = ConversionController.getInstance();
 	private static JPanel panel_divisa = new JPanel();
+	private static Double result;
 	
 	public static JPanel panel() { 
+		panel_divisa.setBounds(0,80,796,426);
 		panel_divisa.setLayout(null);
 		panel_divisa.setVisible(true);
 		
@@ -62,20 +69,13 @@ public class PanelDivisa {
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		panel_divisa.add(lblArrowIco);
 		
-		JButton btnConvertir = new JButton("Convertir");
-		btnConvertir.setBounds(337, 310, 114, 27);
-		btnConvertir.setForeground(Color.WHITE);
-		btnConvertir.setBackground(new Color(0,0,0,150));
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		panel_divisa.add(btnConvertir);
-		
 		JComboBox medidaEntrada = new JComboBox();
 		medidaEntrada.setBounds(175, 158, 161, 27);
 		medidaEntrada.setForeground(Color.WHITE);
 		medidaEntrada.setBackground(new Color(0,0,0,150));
 		medidaEntrada.addItem("Dolar USD");
 		medidaEntrada.addItem("Euro EUR");
-		medidaEntrada.addItem("Peso argentino ARS");
+		medidaEntrada.addItem("Peso Argentino ARS");
 		medidaEntrada.addItem("Libra Esterlina GBP");
 		medidaEntrada.addItem("Yen Japones JPY");
 		medidaEntrada.addItem("Won Coreano KRW");
@@ -88,12 +88,25 @@ public class PanelDivisa {
 		medidaSalida.setBackground(new Color(0,0,0,150));
 		medidaSalida.addItem("Dolar USD");
 		medidaSalida.addItem("Euro EUR");
-		medidaSalida.addItem("Peso argentino ARS");
+		medidaSalida.addItem("Peso Argentino ARS");
 		medidaSalida.addItem("Libra Esterlina GBP");
 		medidaSalida.addItem("Yen Japones JPY");
 		medidaSalida.addItem("Won Coreano KRW");
 		medidaSalida.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		panel_divisa.add(medidaSalida);
+		
+		JButton btnConvertir = new JButton("Convertir");
+		btnConvertir.setBounds(337, 310, 114, 27);
+		btnConvertir.setForeground(Color.WHITE);
+		btnConvertir.setBackground(new Color(0,0,0,150));
+		btnConvertir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				result = sendData.sendInputToObject(medidaEntrada.getSelectedItem().toString(), medidaSalida.getSelectedItem().toString(), Double.valueOf(datoEntrada.getText()));
+				datoSalida.setText(String.format("%.2f", result));
+			}
+		});
+		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		panel_divisa.add(btnConvertir);
 		
 		JLabel lblBackgroundImg = new JLabel("");
 		lblBackgroundImg.setBounds(0, 0, 796, 426);

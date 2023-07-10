@@ -15,6 +15,7 @@ public class PanelLongitud {
 	private static JPanel panel_longitud = new JPanel();
 	
 	public static JPanel panel() {
+		panel_longitud.setBounds(0,80,796,426);
 		panel_longitud.setLayout(null);
 		panel_longitud.setVisible(false);	
 		
