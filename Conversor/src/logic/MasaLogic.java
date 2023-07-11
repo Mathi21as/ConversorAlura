@@ -34,7 +34,7 @@ public class MasaLogic {
 	
 	public Double libraAOtroPeso(String masa, Double valor) {
 		switch(masa) {
-			case "Kilogramo": return Double.valueOf(valor / libra);
+			case "Kilogramo": return Double.valueOf(valor * libra);
 			
 			case "Libra": return valor;
 			
@@ -48,7 +48,7 @@ public class MasaLogic {
 	
 	public Double onzaAOtroPeso(String masa, Double valor) {
 		switch(masa) {
-			case "Kilogramo": return Double.valueOf(valor / onza);
+			case "Kilogramo": return Double.valueOf(valor * onza);
 			
 			case "Libra": return Double.valueOf((valor * onza) / libra);
 			

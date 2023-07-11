@@ -8,16 +8,14 @@ import logic.VolumenLogic;
 
 public class ConversionController {
 	
-	private Double inputValue;
 	private static DivisaLogic divisaLogic = DivisaLogic.getInstance();
 	private static TemperaturaLogic temperaturaLogic = TemperaturaLogic.getInstance();
 	private static LongitudLogic longitudLogic = LongitudLogic.getInstance();
 	private static MasaLogic masaLogic = MasaLogic.getInstance();
+	private static VolumenLogic volumenLogic = VolumenLogic.getInstance();
 	private static ConversionController instance;
 	
-	private ConversionController() {
-		
-	}
+	private ConversionController() {}
 	
 	public static ConversionController getInstance() {
 		if(instance == null) {
@@ -81,6 +79,20 @@ public class ConversionController {
 			case "Libra": return masaLogic.libraAOtroPeso(toConvert, value);
 			
 			case "Tonelada": return masaLogic.toneladaAOtroPeso(toConvert, value);
+			
+			default: return null;
+		}
+	}
+	
+	public Double sendInputToVolumenObject(String type, String toConvert, Double value) {
+		switch(type) {
+			case "Litro": return volumenLogic.litroAOtroVolumen(toConvert, value);
+			
+			case "Galon": return volumenLogic.galonAOtroVolumen(toConvert, value);
+			
+			case "Cuarto": return volumenLogic.cuartoAOtroVolumen(toConvert, value);
+			
+			case "Pie Cubico": return volumenLogic.pieCubicoAOtroVolumen(toConvert, value);
 			
 			default: return null;
 		}
