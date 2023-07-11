@@ -2,6 +2,8 @@ package ui;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,8 +13,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import controller.ConversionController;
+
 public class PanelMasa {
 	private static JPanel panel_masa = new JPanel();
+	private static ConversionController sendData = ConversionController.getInstance();
+	private static Double result;
 	
 	public static JPanel panel() {
 		panel_masa.setBounds(0,80,796,426);
@@ -63,13 +69,6 @@ public class PanelMasa {
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		panel_masa.add(lblArrowIco);
 		
-		JButton btnConvertir = new JButton("Convertir");
-		btnConvertir.setBounds(337, 310, 114, 27);
-		btnConvertir.setForeground(Color.WHITE);
-		btnConvertir.setBackground(new Color(0,0,0,150));
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		panel_masa.add(btnConvertir);
-		
 		JComboBox medidaEntrada = new JComboBox();
 		medidaEntrada.setBounds(175, 158, 161, 27);
 		medidaEntrada.setForeground(Color.WHITE);
@@ -91,6 +90,22 @@ public class PanelMasa {
 		medidaSalida.addItem("Tonelada");
 		medidaSalida.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		panel_masa.add(medidaSalida);
+		
+		JButton btnConvertir = new JButton("Convertir");
+		btnConvertir.setBounds(337, 310, 114, 27);
+		btnConvertir.setForeground(Color.WHITE);
+		btnConvertir.setBackground(new Color(0,0,0,150));
+		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnConvertir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				result = sendData.sendInputToMasaObject(
+						medidaEntrada.getSelectedItem().toString(), 
+						medidaSalida.getSelectedItem().toString(), 
+						Double.valueOf(datoEntrada.getText()));
+				datoSalida.setText(String.format("%.2f", result));
+			}
+		});
+		panel_masa.add(btnConvertir);
 		
 		JLabel lblBackgroundImg = new JLabel("");
 		lblBackgroundImg.setBounds(0, 0, 796, 426);

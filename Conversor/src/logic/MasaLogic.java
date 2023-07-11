@@ -9,39 +9,13 @@ public class MasaLogic {
 	
 	private static MasaLogic instance;
 	
-	private MasaLogic() {
-		
-	}
+	private MasaLogic() {}
 	
 	public static MasaLogic getInstance() {
 		if(instance == null)
 			instance = new MasaLogic();
 		
 		return instance;
-	}
-	
-	public double kilogramoALibra(double kilogramo) {
-		return kilogramo / libra;
-	}
-	
-	public double kilogramoAOnza(double kilogramo) {
-		return kilogramo / onza;
-	}
-	
-	public double kilogramoATonelada(double kilogramo) {
-		return kilogramo * tonelada;
-	}
-	
-	public double libraAKilogramo(double libra) {
-		return libra * this.libra;
-	}
-	
-	public double onzaAKilogramo(double onza) {
-		return onza * this.onza;
-	}
-	
-	public double toneladaAKilogramo(double tonelada) {
-		return tonelada / this.tonelada;
 	}
 	
 	public Double kiloAOtroPeso(String masa, Double valor) {
@@ -53,8 +27,9 @@ public class MasaLogic {
 			case "Onza": return Double.valueOf(valor / onza);
 			
 			case "Tonelada": return Double.valueOf(valor / tonelada);
+			
+			default: return null;
 		}
-		return null;
 	}
 	
 	public Double libraAOtroPeso(String masa, Double valor) {
@@ -66,8 +41,9 @@ public class MasaLogic {
 			case "Onza": return Double.valueOf((valor * libra) / onza);
 			
 			case "Tonelada": return Double.valueOf((valor * libra) / tonelada);
+			
+			default: return null;
 		}
-		return null;
 	}
 	
 	public Double onzaAOtroPeso(String masa, Double valor) {
@@ -79,8 +55,9 @@ public class MasaLogic {
 			case "Onza": return valor;
 			
 			case "Tonelada": return Double.valueOf((valor * onza) / tonelada);
+			
+			default: return null;
 		}
-		return null;
 	}
 	
 	public Double toneladaAOtroPeso(String masa, Double valor) {
@@ -92,8 +69,9 @@ public class MasaLogic {
 			case "Onza": return Double.valueOf((valor * tonelada) / onza);
 			
 			case "Tonelada": return valor;
+			
+			default: return null;
 		}
-		return null;
 	}
 	
 }

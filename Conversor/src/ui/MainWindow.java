@@ -1,31 +1,19 @@
 package ui;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.JTextField;
 import javax.swing.JLabel;
-import java.awt.GridLayout;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
-import javax.swing.JComboBox;
-import javax.swing.JSeparator;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.UIManager;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 
 
 public class MainWindow {
@@ -39,7 +27,7 @@ public class MainWindow {
 			PanelVolumen.panel(),
 			PanelByte.panel()};
 	private Integer panelVisible = 0;
-	private int xMouse, yMouse;
+	private int xMouse, yMouse, xDragged, yDragged;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -151,31 +139,33 @@ public class MainWindow {
 		});
 		panel.add(btnByte);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.addMouseListener(new MouseAdapter() {
+		JPanel panelSuperior = new JPanel();
+		panelSuperior.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				xMouse = e.getX();
 				yMouse = e.getY();
 			}
 		});
-		panel_1.addMouseListener(new MouseAdapter() {
+		panelSuperior.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
-			public void mouseReleased(MouseEvent e) {
-				frame.setLocation(e.getXOnScreen()-xMouse, e.getYOnScreen()-yMouse);
+			public void mouseDragged(MouseEvent e) {
+				xDragged = e.getXOnScreen();
+				yDragged = e.getYOnScreen();
+				frame.setLocation(xDragged-xMouse, yDragged-yMouse);
 			}
 		});
-		panel_1.setBackground(new Color(0, 0, 0));
-		panel_1.setForeground(new Color(255, 255, 255));
-		panel_1.setBounds(0, 0, 796, 24);
-		panel_1.setLayout(null);
+		panelSuperior.setBackground(new Color(0, 0, 0));
+		panelSuperior.setForeground(new Color(255, 255, 255));
+		panelSuperior.setBounds(0, 0, 796, 24);
+		panelSuperior.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Conversor Alura");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel.setBounds(28, 0, 111, 24);
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		panel_1.add(lblNewLabel);
+		JLabel lblTituloVentana = new JLabel("Conversor Alura");
+		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblTituloVentana.setHorizontalAlignment(SwingConstants.LEFT);
+		lblTituloVentana.setBounds(28, 0, 111, 24);
+		lblTituloVentana.setForeground(new Color(255, 255, 255));
+		panelSuperior.add(lblTituloVentana);
 		
 		JButton btnClose = new JButton("");
 		btnClose.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\UI Conversor ALura\\cross-item-list1.png"));
@@ -188,13 +178,13 @@ public class MainWindow {
 				System.exit(0);
 			}
 		});
-		panel_1.add(btnClose);
+		panelSuperior.add(btnClose);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\UI Conversor ALura\\a1.png"));
-		lblNewLabel_1.setBounds(0, 0, 30, 24);
-		panel_1.add(lblNewLabel_1);
+		JLabel lblIconoAlura = new JLabel("");
+		lblIconoAlura.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIconoAlura.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\UI Conversor ALura\\a1.png"));
+		lblIconoAlura.setBounds(0, 0, 30, 24);
+		panelSuperior.add(lblIconoAlura);
 		
 		JButton btnMinimize = new JButton("");
 		btnMinimize.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -209,11 +199,11 @@ public class MainWindow {
 				
 			}
 		});
-		panel_1.add(btnMinimize);
+		panelSuperior.add(btnMinimize);
 		
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(panel);
-		frame.getContentPane().add(panel_1);
+		frame.getContentPane().add(panelSuperior);
 		frame.getContentPane().add(panel_conversion[0]);
 		frame.getContentPane().add(panel_conversion[1]);
 		frame.getContentPane().add(panel_conversion[2]);

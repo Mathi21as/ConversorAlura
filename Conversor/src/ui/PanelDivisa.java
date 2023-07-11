@@ -101,7 +101,10 @@ public class PanelDivisa {
 		btnConvertir.setBackground(new Color(0,0,0,150));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = sendData.sendInputToObject(medidaEntrada.getSelectedItem().toString(), medidaSalida.getSelectedItem().toString(), Double.valueOf(datoEntrada.getText()));
+				result = sendData.sendInputToDivisaObject(
+						medidaEntrada.getSelectedItem().toString(), 
+						medidaSalida.getSelectedItem().toString(), 
+						Double.valueOf(datoEntrada.getText()));
 				datoSalida.setText(String.format("%.2f", result));
 			}
 		});
