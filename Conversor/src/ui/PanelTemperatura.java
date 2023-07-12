@@ -69,7 +69,7 @@ public class PanelTemperatura {
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		panel_temperatura.add(lblArrowIco);
 		
-		JComboBox medidaEntrada = new JComboBox();
+		JComboBox<String> medidaEntrada = new JComboBox<String>();
 		medidaEntrada.setBounds(175, 158, 161, 27);
 		medidaEntrada.setForeground(Color.WHITE);
 		medidaEntrada.setBackground(new Color(0,0,0,150));
@@ -79,7 +79,7 @@ public class PanelTemperatura {
 		medidaEntrada.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		panel_temperatura.add(medidaEntrada);
 		
-		JComboBox medidaSalida = new JComboBox();
+		JComboBox<String> medidaSalida = new JComboBox<String>();
 		medidaSalida.setBounds(452, 158, 161, 27);
 		medidaSalida.setForeground(Color.WHITE);
 		medidaSalida.setBackground(new Color(0,0,0,150));
