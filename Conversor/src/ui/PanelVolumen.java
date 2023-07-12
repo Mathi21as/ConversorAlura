@@ -18,7 +18,7 @@ import controller.ConversionController;
 public class PanelVolumen {
 	
 	private static JPanel panel_volumen = new JPanel();
-	private static ConversionController sendData = ConversionController.getInstance();
+	private static ConversionController conversionController = ConversionController.getInstance();
 	private static Double result;
 	
 	public static JPanel panel() {
@@ -99,7 +99,7 @@ public class PanelVolumen {
 		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = sendData.sendInputToVolumenObject(
+				result = conversionController.sendInputToVolumenObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));

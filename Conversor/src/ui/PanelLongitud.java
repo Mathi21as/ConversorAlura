@@ -17,7 +17,7 @@ import controller.ConversionController;
 
 public class PanelLongitud {
 	private static JPanel panel_longitud = new JPanel();
-	private static ConversionController sendData = ConversionController.getInstance();
+	private static ConversionController conversionController = ConversionController.getInstance();
 	private static Double result;
 	
 	public static JPanel panel() {
@@ -100,7 +100,7 @@ public class PanelLongitud {
 		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = sendData.sendInputToLongitudObject(
+				result = conversionController.sendInputToLongitudObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));

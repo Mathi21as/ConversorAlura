@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 import controller.ConversionController;
 
 public class PanelDivisa {
-	private static ConversionController sendData = ConversionController.getInstance();
+	private static ConversionController conversionController = ConversionController.getInstance();
 	private static JPanel panel_divisa = new JPanel();
 	private static Double result;
 	
@@ -101,7 +101,7 @@ public class PanelDivisa {
 		btnConvertir.setBackground(new Color(0,0,0,150));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = sendData.sendInputToDivisaObject(
+				result = conversionController.sendInputToDivisaObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));

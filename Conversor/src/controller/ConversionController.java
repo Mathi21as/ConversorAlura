@@ -1,5 +1,6 @@
 package controller;
 
+import logic.ByteLogic;
 import logic.DivisaLogic;
 import logic.LongitudLogic;
 import logic.MasaLogic;
@@ -13,6 +14,7 @@ public class ConversionController {
 	private static LongitudLogic longitudLogic = LongitudLogic.getInstance();
 	private static MasaLogic masaLogic = MasaLogic.getInstance();
 	private static VolumenLogic volumenLogic = VolumenLogic.getInstance();
+	private static ByteLogic byteLogic = ByteLogic.getInstance();
 	private static ConversionController instance;
 	
 	private ConversionController() {}
@@ -93,6 +95,22 @@ public class ConversionController {
 			case "Cuarto": return volumenLogic.cuartoAOtroVolumen(toConvert, value);
 			
 			case "Pie Cubico": return volumenLogic.pieCubicoAOtroVolumen(toConvert, value);
+			
+			default: return null;
+		}
+	}
+	
+	public Double sendInputToByteObject(String type, String toConvert, Double value) {
+		switch(type) {
+			case "Byte": return byteLogic.byteAOtraUnidad(toConvert, value);
+			
+			case "Kilobyte": return byteLogic.kilobyteAOtraUnidad(toConvert, value);
+			
+			case "Megabyte": return byteLogic.megabyteAOtraUnidad(toConvert, value);
+			
+			case "Gigabyte GB": return byteLogic.gigabyteAOtraUnidad(toConvert, value);
+			
+			case "Terabyte TB": return byteLogic.terabyteAOtraUnidad(toConvert, value);
 			
 			default: return null;
 		}

@@ -17,7 +17,7 @@ import controller.ConversionController;
 
 public class PanelTemperatura {
 	private static JPanel panel_temperatura = new JPanel();
-	private static ConversionController sendData = ConversionController.getInstance();
+	private static ConversionController conversionController = ConversionController.getInstance();
 	private static Double result;
 	
 	public static JPanel panel() {
@@ -96,7 +96,7 @@ public class PanelTemperatura {
 		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = sendData.sendInputToTemperaturaObject(
+				result = conversionController.sendInputToTemperaturaObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));
