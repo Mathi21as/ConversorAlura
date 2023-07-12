@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -59,6 +61,19 @@ public class PanelByte {
 		datoEntrada.setBounds(175, 223, 161, 27);
 		datoEntrada.setBackground(new Color(0,0,0,150));
 		datoEntrada.setForeground(Color.WHITE);
+		datoEntrada.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				int key = e.getKeyChar();
+
+			    boolean numeros = key >= 48 && key <= 57;
+			        
+			    if (!numeros)
+			    {
+			        e.consume();
+			    }
+			}
+		});
 		panel_byte.add(datoEntrada);
 		
 		JLabel lblArrowIco = new JLabel("");
