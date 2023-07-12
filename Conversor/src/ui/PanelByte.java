@@ -64,8 +64,7 @@ public class PanelByte {
 		JLabel lblArrowIco = new JLabel("");
 		lblArrowIco.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblArrowIco.setHorizontalAlignment(SwingConstants.CENTER);
-		lblArrowIco.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\image.png"));
+		lblArrowIco.setIcon(new ImageIcon(".\\resources\\images\\image.png"));
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		panel_byte.add(lblArrowIco);
 		
@@ -113,9 +112,7 @@ public class PanelByte {
 		lblBackgroundImg.setBounds(0, 0, 796, 426);
 		lblBackgroundImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
-		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\"
-				+ "byte.png"));
+		lblBackgroundImg.setIcon(new ImageIcon(".\\resources\\images\\byte.png"));
 		panel_byte.add(lblBackgroundImg);
 		
 		return panel_byte;

@@ -168,8 +168,7 @@ public class MainWindow {
 		panelSuperior.add(lblTituloVentana);
 		
 		JButton btnClose = new JButton("");
-		btnClose.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\cross-item-list1.png"));
+		btnClose.setIcon(new ImageIcon(".\\resources\\images\\cross-item-list1.png"));
 		btnClose.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnClose.setBackground(new Color(255, 0, 0));
 		btnClose.setForeground(new Color(255, 0, 0));
@@ -183,15 +182,13 @@ public class MainWindow {
 		
 		JLabel lblIconoAlura = new JLabel("");
 		lblIconoAlura.setHorizontalAlignment(SwingConstants.CENTER);
-		lblIconoAlura.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\a1.png"));
+		lblIconoAlura.setIcon(new ImageIcon(".\\resources\\images\\a1.png"));
 		lblIconoAlura.setBounds(0, 0, 30, 24);
 		panelSuperior.add(lblIconoAlura);
 		
 		JButton btnMinimize = new JButton("");
 		btnMinimize.setVerticalAlignment(SwingConstants.BOTTOM);
-		btnMinimize.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\minimize-sign1.png"));
+		btnMinimize.setIcon(new ImageIcon(".\\resources\\images\\minimize-sign1.png"));
 		btnMinimize.setForeground(Color.WHITE);
 		btnMinimize.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnMinimize.setBackground(Color.GRAY);

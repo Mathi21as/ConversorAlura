@@ -64,8 +64,7 @@ public class PanelDivisa {
 		JLabel lblArrowIco = new JLabel("");
 		lblArrowIco.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblArrowIco.setHorizontalAlignment(SwingConstants.CENTER);
-		lblArrowIco.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\image.png"));
+		lblArrowIco.setIcon(new ImageIcon(".\\resources\\images\\image.png"));
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		panel_divisa.add(lblArrowIco);
 		
@@ -115,8 +114,7 @@ public class PanelDivisa {
 		lblBackgroundImg.setBounds(0, 0, 796, 426);
 		lblBackgroundImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
-		lblBackgroundImg.setIcon(new ImageIcon("C:\\Users\\0x00034a5d\\Downloads\\"
-				+ "UI Conversor ALura\\divisa.png"));
+		lblBackgroundImg.setIcon(new ImageIcon(".\\resources\\images\\divisa.png"));
 		panel_divisa.add(lblBackgroundImg);
 		
 		return panel_divisa;
