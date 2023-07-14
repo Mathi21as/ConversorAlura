@@ -129,7 +129,7 @@ public class PanelDivisa {
 		lblBackgroundImg.setBounds(0, 0, 796, 426);
 		lblBackgroundImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBackgroundImg.setLabelFor(lblTipoConversion);
-		lblBackgroundImg.setIcon(new ImageIcon(".\\resources\\images\\divisa.png"));
+		lblBackgroundImg.setIcon(new ImageIcon("./resources/images/divisa.png"));
 		panel_divisa.add(lblBackgroundImg);
 		
 		return panel_divisa;
