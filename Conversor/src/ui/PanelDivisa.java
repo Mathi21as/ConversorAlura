@@ -25,7 +25,7 @@ public class PanelDivisa {
 	public static JPanel panel() { 
 		panel_divisa.setBounds(0,80,796,426);
 		panel_divisa.setLayout(null);
-		panel_divisa.setVisible(true);
+		panel_divisa.setVisible(false);
 		
 		JLabel lblTipoConversion = new JLabel("Divisa");
 		lblTipoConversion.setHorizontalAlignment(SwingConstants.CENTER);

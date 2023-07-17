@@ -23,6 +23,7 @@ public class MainWindow {
 
 	private JFrame frame;
 	private JPanel panel_conversion[] = {
+			PanelBienvenida.panel(),
 			PanelDivisa.panel(), 
 			PanelTemperatura.panel(), 
 			PanelLongitud.panel(),
@@ -70,8 +71,8 @@ public class MainWindow {
 		btnDivisa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[0].setVisible(true);
-				panelVisible = 0;
+				panel_conversion[1].setVisible(true);
+				panelVisible = 1;
 			}
 		});
 		panel.setLayout(null);
@@ -84,8 +85,8 @@ public class MainWindow {
 		btnTemperatura.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[1].setVisible(true);
-				panelVisible = 1;
+				panel_conversion[2].setVisible(true);
+				panelVisible = 2;
 			}
 		});
 		panel.add(btnTemperatura);
@@ -97,8 +98,8 @@ public class MainWindow {
 		btnLongitud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[2].setVisible(true);
-				panelVisible = 2;
+				panel_conversion[3].setVisible(true);
+				panelVisible = 3;
 			}
 		});
 		panel.add(btnLongitud);
@@ -110,8 +111,8 @@ public class MainWindow {
 		btnMasa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[3].setVisible(true);
-				panelVisible = 3;
+				panel_conversion[4].setVisible(true);
+				panelVisible = 4;
 			}
 		});
 		panel.add(btnMasa);
@@ -123,8 +124,8 @@ public class MainWindow {
 		btnVolumen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[4].setVisible(true);
-				panelVisible = 4;
+				panel_conversion[5].setVisible(true);
+				panelVisible = 5;
 			}
 		});
 		panel.add(btnVolumen);
@@ -136,8 +137,8 @@ public class MainWindow {
 		btnByte.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[5].setVisible(true);
-				panelVisible = 5;
+				panel_conversion[6].setVisible(true);
+				panelVisible = 6;
 			}
 		});
 		panel.add(btnByte);
@@ -213,5 +214,7 @@ public class MainWindow {
 		frame.getContentPane().add(panel_conversion[3]);
 		frame.getContentPane().add(panel_conversion[4]);
 		frame.getContentPane().add(panel_conversion[5]);
+		frame.getContentPane().add(panel_conversion[6]);
+		
 	}
 }
