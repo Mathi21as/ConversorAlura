@@ -36,7 +36,7 @@
 
 ## Sobre el uso
 
-  En cuanto al uso, es sencillo. 
+  En cuanto al uso, es sencillo.<br> 
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
   Al seleccionar uno se abrira la pantalla correspondiente en la que apareceran
