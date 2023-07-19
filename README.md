@@ -69,7 +69,7 @@
    correspondientes a su conversion, se oprime el boton "Convertir". Luego, debajo de
    la segunda lista de unidades aparecera el valor de la conversion.
 
-## Autores del proyecto.
+## Autor
 
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
 tenga con la ejecucion del programa o sugerencias sobre le mismo pueden contactarse por el
