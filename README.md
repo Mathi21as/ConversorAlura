@@ -13,24 +13,24 @@
       El programa tiene las siguientes opciones en cada tipo de conversion, de
       las cuales se puede convertir una a cualquier otra de la lista del mismo tipo:
       
-        - Divisa:
+        + Divisa:
           Las divisas entre las cuales se puede convertir son: dolar, euro, 
           peso argentino, libra esterlina, won coreano y yen japones.
 
-        - Temperatura:
+        + Temperatura:
           Se puede convertir entre las tres unidades de temperatura: celsius,
           farenheit y kelvin.
 
-        - Longitud:
+        + Longitud:
           Se puede convertir entre las unidades metro, pulgada, pie, yarda y milla.
 
-        - Peso (en el programa figura como Masa):
+        + Peso (en el programa figura como Masa):
           Se puede convertir entre las unidades kilogramo, libra, onza y tonelada.
 
-        - Volumen:
+        + Volumen:
           Se puede convertir entre las unidades litro, galon, pie cubico y cuarto.
 
-        - Bytes:
+        + Bytes:
           Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
           y terabyte.
         
