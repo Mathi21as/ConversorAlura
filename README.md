@@ -50,4 +50,4 @@
 
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
 tenga con la ejecucion del programa o sugerencias sobre le mismo pueden contactarse por el
-correo ### romanmathias21@gmail.com ###
+correo romanmathias21@gmail.com
