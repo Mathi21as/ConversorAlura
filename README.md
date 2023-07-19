@@ -37,7 +37,7 @@
 ## Sobre el uso
 
   En cuanto al uso, es sencillo.<br> 
-  1.Debe asegurarse de tener instalado java en su equipo, puede hacerlo de la
+  1. Debe asegurarse de tener instalado java en su equipo, puede hacerlo de la
   siguiente manera:<br>
   + Desde 'Inicio > Ejecutar'
 
