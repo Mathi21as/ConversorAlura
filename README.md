@@ -1,6 +1,7 @@
 # ConversorAlura
 
 Descripción de su proyecto.
+<hr>
 
   Este es un challenge del programa Oracle Next Education (ONE).
   El challenge en si se trataba de hacer un conversor de divisas y de 
@@ -14,28 +15,29 @@ Funcionalidades.
   El programa tiene las siguientes opciones en cada tipo de conversion, de
   las cuales se puede convertir una a cualquier otra de la lista del mismo tipo:
   
-    + Divisa:
+  + Divisa:
       Las divisas entre las cuales se puede convertir son: dolar, euro, 
       peso argentino, libra esterlina, won coreano y yen japones.
 
-    + Temperatura:
+  + Temperatura:
       Se puede convertir entre las tres unidades de temperatura: celsius,
       farenheit y kelvin.
 
-    + Longitud:
+  + Longitud:
       Se puede convertir entre las unidades metro, pulgada, pie, yarda y milla.
 
-    + Peso (en el programa figura como Masa):
+  + Peso (en el programa figura como Masa):
       Se puede convertir entre las unidades kilogramo, libra, onza y tonelada.
 
-    + Volumen:
+  + Volumen:
       Se puede convertir entre las unidades litro, galon, pie cubico y cuarto.
 
-    + Bytes:
+  + Bytes:
       Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
       y terabyte.
     
 Cómo pueden usarlo los usuarios.
+<hr>
   En cuanto al uso, es sencillo. 
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
@@ -47,6 +49,7 @@ Cómo pueden usarlo los usuarios.
   la segunda lista de unidades aparecera el valor de la conversion.
 
 Autores del proyecto.
+<hr>
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
 tenga con la ejecucion del programa o sugerencias sobre le mismo pueden contactarse por el
 correo romanmathias21@gmail.com
