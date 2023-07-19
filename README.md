@@ -44,7 +44,9 @@
    + Escriba 'cmd'. Una vez en la ventana de MS-DOS que se abre, escriba 'java -versión' (deje un espacio en blanco entre la           palabra java y el guión).<br>
 
   2. Descargar este repositorio haciendo click en el boton verde "<> Code" y luego en "Download ZIP"<br>
+  
   ![Como descargar el repo](https://ax-blog.axarnet.dev/blog/images/blog/2022/github/github-descargar-zip.jpg)
+  
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
   Al seleccionar uno se abrira la pantalla correspondiente en la que apareceran
