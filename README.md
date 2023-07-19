@@ -9,6 +9,7 @@ Descripción de su proyecto.
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
   volumen y bytes.
 
+
 Funcionalidades.
 <hr>
 
@@ -35,7 +36,8 @@ Funcionalidades.
   + Bytes:
       Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
       y terabyte.
-    
+
+
 Cómo pueden usarlo los usuarios.
 <hr>
   En cuanto al uso, es sencillo. 
@@ -47,6 +49,7 @@ Cómo pueden usarlo los usuarios.
   de unidades se ingresa el valor y, luego de seleccionar en las listas las unidades
   correspondientes a su conversion, se oprime el boton "Convertir". Luego, debajo de
   la segunda lista de unidades aparecera el valor de la conversion.
+
 
 Autores del proyecto.
 <hr>
