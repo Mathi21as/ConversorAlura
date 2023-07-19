@@ -34,7 +34,7 @@
       Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
       y terabyte.
 
-## Cómo pueden usarlo los usuarios
+## Sobre el uso
 
   En cuanto al uso, es sencillo. 
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
@@ -50,4 +50,4 @@
 
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
 tenga con la ejecucion del programa o sugerencias sobre le mismo pueden contactarse por el
-correo romanmathias21@gmail.com
+correo ### romanmathias21@gmail.com ###
