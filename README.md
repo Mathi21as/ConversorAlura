@@ -43,11 +43,11 @@
 
    + Escriba 'cmd'. Una vez en la ventana de MS-DOS que se abre, escriba 'java -versión' (deje un espacio en blanco entre la           palabra java y el guión).<br>
 
-   Luego de esto en la consola debe aparecer la version de java instalada, algo como esto:
+     Luego de esto en la consola debe aparecer la version de java instalada, algo como esto:
 
    ![version java](https://sede.mitma.gob.es/NR/rdonlyres/D1A6FF50-7E0B-4E15-8F4A-50291AF861BB/74930/comprobar_java_09.gif)
 
-   En caso de que en consola diga "java no se reconoce como un comando interno o externo, programa o archivo por lotes              ejecutable", debe instalar java. Aqui dejo un link sobre como instalarlo: 
+    <pre>En caso de que en consola diga "java no se reconoce como un comando interno o externo, programa o archivo por lotes              ejecutable", debe instalar java. Aqui dejo un link sobre como instalarlo: </pre>
 
    https://www.java.com/es/download/help/windows_manual_download.html
 
