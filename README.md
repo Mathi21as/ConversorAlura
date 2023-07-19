@@ -8,7 +8,7 @@ Descripción de su proyecto.
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
   volumen y bytes.
 
-*Funcionalidades.*
+<center>Funcionalidades.</center>
 
   El programa tiene las siguientes opciones en cada tipo de conversion, de
   las cuales se puede convertir una a cualquier otra de la lista del mismo tipo:
