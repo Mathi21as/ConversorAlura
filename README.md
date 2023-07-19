@@ -1,6 +1,6 @@
 # ConversorAlura
 
-Descripción de su proyecto.
+## Descripción de su proyecto.
 <hr>
 
   Este es un challenge del programa Oracle Next Education (ONE).
@@ -10,7 +10,7 @@ Descripción de su proyecto.
   volumen y bytes.
 
 <br>
-<center><p width="200px">Funcionalidades.</p></center>
+<center> Funcionalidades. </center>
 <hr>
 
   El programa tiene las siguientes opciones en cada tipo de conversion, de
