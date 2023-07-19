@@ -2,7 +2,7 @@
 
 ## Descripción de su proyecto
 
-  Este es un challenge del programa Oracle Next Education (ONE).
+  Este es un challenge del programa Oracle Next Education (ONE) y Alura LATAM.
   El challenge en si se trataba de hacer un conversor de divisas y de 
   temperatura con la libertad de agregar otras conversiones al gusto del 
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
@@ -43,7 +43,8 @@
 
    + Escriba 'cmd'. Una vez en la ventana de MS-DOS que se abre, escriba 'java -versión' (deje un espacio en blanco entre la           palabra java y el guión).<br>
 
-  2. Descargar este repositorio haciendo click en el boton verde "Code"
+  2. Descargar este repositorio haciendo click en el boton verde "<> Code" y luego en "Download ZIP"<br>
+  ![Como descargar el repo](https://ax-blog.axarnet.dev/blog/images/blog/2022/github/github-descargar-zip.jpg)
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
   Al seleccionar uno se abrira la pantalla correspondiente en la que apareceran
