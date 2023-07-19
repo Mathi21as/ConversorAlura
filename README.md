@@ -4,7 +4,7 @@
 
   Este es un challenge del programa Oracle Next Education (ONE) y Alura LATAM.
   El challenge en si se trataba de hacer un conversor de divisas y de 
-  temperatura con la libertad de agregar otras conversiones al gusto del 
+  temperatura con la libertad de agregar otras conversiones a elección del 
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
   volumen y bytes.
 
