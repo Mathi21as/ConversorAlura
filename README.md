@@ -10,7 +10,7 @@ Descripción de su proyecto.
   volumen y bytes.
 
 <br>
-<center><p>Funcionalidades.</p></center>
+<center><p width="200px">Funcionalidades.</p></center>
 <hr>
 
   El programa tiene las siguientes opciones en cada tipo de conversion, de
