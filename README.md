@@ -1,7 +1,6 @@
 # ConversorAlura
 
-## Descripción de su proyecto.
-<hr>
+## Descripción de su proyecto
 
   Este es un challenge del programa Oracle Next Education (ONE).
   El challenge en si se trataba de hacer un conversor de divisas y de 
@@ -9,9 +8,7 @@
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
   volumen y bytes.
 
-<br>
-<center> Funcionalidades. </center>
-<hr>
+## Funcionalidades
 
   El programa tiene las siguientes opciones en cada tipo de conversion, de
   las cuales se puede convertir una a cualquier otra de la lista del mismo tipo:
@@ -37,9 +34,8 @@
       Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
       y terabyte.
 
-<br>
-Cómo pueden usarlo los usuarios.
-<hr>
+## Cómo pueden usarlo los usuarios
+
   En cuanto al uso, es sencillo. 
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
@@ -50,10 +46,8 @@ Cómo pueden usarlo los usuarios.
   correspondientes a su conversion, se oprime el boton "Convertir". Luego, debajo de
   la segunda lista de unidades aparecera el valor de la conversion.
 
+## Autores del proyecto.
 
-<br>
-Autores del proyecto.
-<hr>
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
 tenga con la ejecucion del programa o sugerencias sobre le mismo pueden contactarse por el
 correo romanmathias21@gmail.com
