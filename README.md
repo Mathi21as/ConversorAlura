@@ -9,7 +9,7 @@ Descripción de su proyecto.
   desarrollador, por lo cual, agregue las conversiones de longitud, peso, 
   volumen y bytes.
 
-
+<br>
 Funcionalidades.
 <hr>
 
@@ -37,7 +37,7 @@ Funcionalidades.
       Se puede convertir entre las unidades byte, kilobyte, megabyte, gigabyte 
       y terabyte.
 
-
+<br>
 Cómo pueden usarlo los usuarios.
 <hr>
   En cuanto al uso, es sencillo. 
@@ -50,7 +50,7 @@ Cómo pueden usarlo los usuarios.
   correspondientes a su conversion, se oprime el boton "Convertir". Luego, debajo de
   la segunda lista de unidades aparecera el valor de la conversion.
 
-
+<br>
 Autores del proyecto.
 <hr>
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
