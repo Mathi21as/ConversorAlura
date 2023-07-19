@@ -37,6 +37,11 @@
 ## Sobre el uso
 
   En cuanto al uso, es sencillo.<br> 
+  Primero debe asegurarse de tener instalado java en su equipo, puede hacerlo de la
+  siguiente manera:<br>
+  + Desde 'Inicio > Ejecutar'
+
+  + Escriba 'cmd'. Una vez en la ventana de MS-DOS que se abre, escriba 'java -versión' (deje un espacio en blanco entre la           palabra java y el guión).
   Al abrir el programa aparecera una pantalla de bienvenida, sobre la misma se 
   encuentran los tipos de conversion que se pueden hacer. 
   Al seleccionar uno se abrira la pantalla correspondiente en la que apareceran
