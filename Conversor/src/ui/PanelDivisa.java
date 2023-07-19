@@ -115,7 +115,7 @@ public class PanelDivisa {
 		btnConvertir.setBackground(new Color(0,0,0,150));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = conversionController.sendInputToDivisaObject(
+				result = conversionController.sendInputToCurrencyObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));

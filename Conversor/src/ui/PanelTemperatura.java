@@ -110,7 +110,7 @@ public class PanelTemperatura {
 		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = conversionController.sendInputToTemperaturaObject(
+				result = conversionController.sendInputToTemperatureObject(
 						medidaEntrada.getSelectedItem().toString(), 
 						medidaSalida.getSelectedItem().toString(), 
 						Double.valueOf(datoEntrada.getText()));
