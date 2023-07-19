@@ -47,7 +47,9 @@
 
    ![version java](https://sede.mitma.gob.es/NR/rdonlyres/D1A6FF50-7E0B-4E15-8F4A-50291AF861BB/74930/comprobar_java_09.gif)
 
-   En caso de que en consola diga "java no se esta instruccion o comando "
+   En caso de que en consola diga "java no se reconoce como un comando interno o externo, programa o archivo por lotes              ejecutable", debe instalar java. Aqui dejo un link sobre como instalarlo: 
+
+   https://www.java.com/es/download/help/windows_manual_download.html
 
   2. Descargar este repositorio haciendo click en el boton verde "<> Code" y luego en "Download ZIP"<br>
   
