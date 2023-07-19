@@ -1,6 +1,6 @@
 # ConversorAlura
 
-## Descripción de su proyecto
+## Descripción
 
   Este es un challenge del programa Oracle Next Education (ONE) y Alura LATAM.
   El challenge en si se trataba de hacer un conversor de divisas y de 
