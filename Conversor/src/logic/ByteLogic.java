@@ -16,81 +16,81 @@ public class ByteLogic {
 		return instance;
 	}
 	
-	public Double byteAOtraUnidad (String tipo, Double valor) {
-		switch(tipo) {
-			case "Byte": return valor;
+	public Double byteToOtherUnit (String type, Double value) {
+		switch(type) {
+			case "Byte": return value;
 			
-			case "Kilobyte KB": return valor / kiloByte;
+			case "Kilobyte KB": return value / kiloByte;
 			
-			case "Megabyte MB": return valor / megaByte;
+			case "Megabyte MB": return value / megaByte;
 			
-			case "Gigabyte GB": return valor / gigaByte;
+			case "Gigabyte GB": return value / gigaByte;
 			
-			case "Terabyte TB": return valor / teraByte;
-			
-			default: return null;
-		}
-	}
-	
-	public Double kilobyteAOtraUnidad (String tipo, Double valor) {
-		switch(tipo) {
-			case "Byte": return valor * kiloByte;
-			
-			case "Kilobyte KB": return valor;
-			
-			case "Megabyte MB": return (valor * kiloByte) / megaByte;
-			
-			case "Gigabyte GB": return (valor * kiloByte) / gigaByte;
-			
-			case "Terabyte TB": return (valor * kiloByte) / teraByte;
+			case "Terabyte TB": return value / teraByte;
 			
 			default: return null;
 		}
 	}
 	
-	public Double megabyteAOtraUnidad (String tipo, Double valor) {
-		switch(tipo) {
-			case "Byte": return valor * megaByte;
+	public Double kilobyteToOtherUnit (String type, Double value) {
+		switch(type) {
+			case "Byte": return value * kiloByte;
 			
-			case "Kilobyte KB": return (valor * megaByte) / kiloByte;
+			case "Kilobyte KB": return value;
 			
-			case "Megabyte MB": return valor;
+			case "Megabyte MB": return (value * kiloByte) / megaByte;
 			
-			case "Gigabyte GB": return (valor * megaByte) / gigaByte;
+			case "Gigabyte GB": return (value * kiloByte) / gigaByte;
 			
-			case "Terabyte TB": return (valor * megaByte) / teraByte;
-			
-			default: return null;
-		}
-	}
-	
-	public Double gigabyteAOtraUnidad (String tipo, Double valor) {
-		switch(tipo) {
-			case "Byte": return valor * gigaByte;
-			
-			case "Kilobyte KB": return (valor * gigaByte) / kiloByte;
-			
-			case "Megabyte MB": return (valor * gigaByte) / megaByte;
-			
-			case "Gigabyte GB": return valor;
-			
-			case "Terabyte TB": return (valor * gigaByte) / teraByte;
+			case "Terabyte TB": return (value * kiloByte) / teraByte;
 			
 			default: return null;
 		}
 	}
 	
-	public Double terabyteAOtraUnidad (String tipo, Double valor) {
-		switch(tipo) {
-			case "Byte": return valor * teraByte;
+	public Double megabyteToOtherUnit (String type, Double value) {
+		switch(type) {
+			case "Byte": return value * megaByte;
 			
-			case "Kilobyte KB": return (valor * teraByte) / kiloByte;
+			case "Kilobyte KB": return (value * megaByte) / kiloByte;
 			
-			case "Megabyte MB": return (valor * teraByte) / megaByte;
+			case "Megabyte MB": return value;
 			
-			case "Gigabyte GB": return (valor * teraByte) / gigaByte;
+			case "Gigabyte GB": return (value * megaByte) / gigaByte;
 			
-			case "Terabyte TB": return valor;
+			case "Terabyte TB": return (value * megaByte) / teraByte;
+			
+			default: return null;
+		}
+	}
+	
+	public Double gigabyteToOtherUnit (String type, Double value) {
+		switch(type) {
+			case "Byte": return value * gigaByte;
+			
+			case "Kilobyte KB": return (value * gigaByte) / kiloByte;
+			
+			case "Megabyte MB": return (value * gigaByte) / megaByte;
+			
+			case "Gigabyte GB": return value;
+			
+			case "Terabyte TB": return (value * gigaByte) / teraByte;
+			
+			default: return null;
+		}
+	}
+	
+	public Double terabyteToOtherUnit (String type, Double value) {
+		switch(type) {
+			case "Byte": return value * teraByte;
+			
+			case "Kilobyte KB": return (value * teraByte) / kiloByte;
+			
+			case "Megabyte MB": return (value * teraByte) / megaByte;
+			
+			case "Gigabyte GB": return (value * teraByte) / gigaByte;
+			
+			case "Terabyte TB": return value;
 			
 			default: return null;
 		}
