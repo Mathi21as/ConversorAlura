@@ -79,7 +79,7 @@ public class CurrencyPane {
 		JLabel lblArrowIco = new JLabel("");
 		lblArrowIco.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblArrowIco.setHorizontalAlignment(SwingConstants.CENTER);
-		lblArrowIco.setIcon(new ImageIcon(".\\resources\\images\\image.png"));
+		lblArrowIco.setIcon(new ImageIcon("./resources/images/image.png"));
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		pane_divisa.add(lblArrowIco);
 		

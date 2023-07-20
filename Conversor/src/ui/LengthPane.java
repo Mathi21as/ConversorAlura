@@ -79,7 +79,7 @@ public class LengthPane {
 		JLabel lblArrowIco = new JLabel("");
 		lblArrowIco.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblArrowIco.setHorizontalAlignment(SwingConstants.CENTER);
-		lblArrowIco.setIcon(new ImageIcon(".\\resources\\images\\image.png"));
+		lblArrowIco.setIcon(new ImageIcon("./resources/images/image.png"));
 		lblArrowIco.setBounds(337, 158, 114, 92);
 		pane_longitud.add(lblArrowIco);
 		
@@ -127,7 +127,7 @@ public class LengthPane {
 		lblBackgroundImg.setBounds(0, 0, 796, 426);
 		lblBackgroundImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBackgroundImg.setLabelFor(lblConversionType);
-		lblBackgroundImg.setIcon(new ImageIcon(".\\resources\\images\\longitud.png"));
+		lblBackgroundImg.setIcon(new ImageIcon("./resources/images/longitud.png"));
 		pane_longitud.add(lblBackgroundImg);
 		
 		return pane_longitud;

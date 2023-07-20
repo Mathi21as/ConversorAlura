@@ -3,7 +3,7 @@ package logic;
 
 public class CurrencyLogic {
 	//los valuees asignados a las currencys son su equivalente en pesos argentinos
-	private final Double dolar = 262.54;  // 483.37; //el value corresponde al dolar blue, no al dolar convencional
+	private final Double dolar = 262.54;  // 483.37; /el value corresponde al dolar blue, no al dolar convencional
 	private final Double euro = 288.77;
 	private final Double libraEsterlina = 307.92;
 	private final Double yen = 1.84;

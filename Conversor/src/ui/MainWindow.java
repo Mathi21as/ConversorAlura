@@ -172,7 +172,7 @@ public class MainWindow {
 		paneTop.add(lblWindowTitle);
 		
 		JButton btnClose = new JButton("");
-		btnClose.setIcon(new ImageIcon(".\\resources\\images\\cross-item-list1.png"));
+		btnClose.setIcon(new ImageIcon("./resources/images/cross-item-list1.png"));
 		btnClose.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnClose.setBackground(new Color(255, 0, 0));
 		btnClose.setForeground(new Color(255, 0, 0));
@@ -186,13 +186,13 @@ public class MainWindow {
 		
 		JLabel lblAluraIcon = new JLabel("");
 		lblAluraIcon.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAluraIcon.setIcon(new ImageIcon(".\\resources\\images\\a1.png"));
+		lblAluraIcon.setIcon(new ImageIcon("./resources/images/a1.png"));
 		lblAluraIcon.setBounds(0, 0, 30, 24);
 		paneTop.add(lblAluraIcon);
 		
 		JButton btnMinimize = new JButton("");
 		btnMinimize.setVerticalAlignment(SwingConstants.BOTTOM);
-		btnMinimize.setIcon(new ImageIcon(".\\resources\\images\\minimize-sign1.png"));
+		btnMinimize.setIcon(new ImageIcon("./resources/images/minimize-sign1.png"));
 		btnMinimize.setForeground(Color.WHITE);
 		btnMinimize.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnMinimize.setBackground(Color.GRAY);

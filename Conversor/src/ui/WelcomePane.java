@@ -45,7 +45,7 @@ public class WelcomePane {
 		pane_bienvenida.add(lblAnno);
 		
 		JLabel lblBackground = new JLabel("");
-		lblBackground.setIcon(new ImageIcon("W:\\Documentos 0x00034A5D\\workspace\\Oracle-Alura-One\\Conversor-Alura\\ConversorAlura\\Conversor\\resources\\images\\bienvenida.png"));
+		lblBackground.setIcon(new ImageIcon("./resources/images/bienvenida.png"));
 		lblBackground.setBounds(0, 0, 796, 421);
 		pane_bienvenida.add(lblBackground);
 		
