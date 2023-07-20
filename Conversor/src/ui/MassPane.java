@@ -112,7 +112,7 @@ public class MassPane {
 		btnConvert.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = conversionController.sendInputToMasaObject(
+				result = conversionController.sendInputToMassObject(
 						inputMeasure.getSelectedItem().toString(), 
 						outputMeasure.getSelectedItem().toString(), 
 						Double.valueOf(inputData.getText()));

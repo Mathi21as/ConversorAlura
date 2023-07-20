@@ -113,7 +113,7 @@ public class VolumePane {
 		btnConvert.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = conversionController.sendInputToVolumenObject(
+				result = conversionController.sendInputToVolumeObject(
 						inputMeasure.getSelectedItem().toString(), 
 						outputMeasure.getSelectedItem().toString(), 
 						Double.valueOf(inputData.getText()));

@@ -115,7 +115,7 @@ public class CurrencyPane {
 		btnConvert.setBackground(new Color(0,0,0,150));
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result = conversionController.sendInputToDivisaObject(
+				result = conversionController.sendInputToCurrencyObject(
 						inputMeasure.getSelectedItem().toString(), 
 						outputMeasure.getSelectedItem().toString(), 
 						Double.valueOf(inputData.getText()));
