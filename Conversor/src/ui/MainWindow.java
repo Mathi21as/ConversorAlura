@@ -22,15 +22,15 @@ import java.awt.event.KeyEvent;
 public class MainWindow {
 
 	private JFrame frame;
-	private JPanel panel_conversion[] = {
-			PanelBienvenida.panel(),
-			PanelDivisa.panel(), 
-			PanelTemperatura.panel(), 
-			PanelLongitud.panel(),
-			PanelMasa.panel(),
-			PanelVolumen.panel(),
-			PanelByte.panel()};
-	private Integer panelVisible = 0;
+	private JPanel pane_conversion[] = {
+			WelcomePane.pane(),
+			CurrencyPane.pane(), 
+			TemperaturePane.pane(), 
+			LengthPane.pane(),
+			MassPane.pane(),
+			VolumePane.pane(),
+			BytePane.pane()};
+	private Integer paneVisible = 0;
 	private int xMouse, yMouse, xDragged, yDragged;
 
 	public static void main(String[] args) {
@@ -60,75 +60,75 @@ public class MainWindow {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(0, 35, 796, 34);
-		panel.setBackground(new Color(0,0,0,000));
+		JPanel pane = new JPanel();
+		pane.setBounds(0, 35, 796, 34);
+		pane.setBackground(new Color(0,0,0,000));
 		
-		JButton btnDivisa = new JButton("Divisa");
-		btnDivisa.setBounds(43, 2, 110, 26);
-		btnDivisa.setForeground(Color.WHITE);
-		btnDivisa.setBackground(new Color(0,0,0,250));
-		btnDivisa.addActionListener(new ActionListener() {
+		JButton btnCurrency = new JButton("Divisa");
+		btnCurrency.setBounds(43, 2, 110, 26);
+		btnCurrency.setForeground(Color.WHITE);
+		btnCurrency.setBackground(new Color(0,0,0,250));
+		btnCurrency.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[1].setVisible(true);
-				panelVisible = 1;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[1].setVisible(true);
+				paneVisible = 1;
 			}
 		});
-		panel.setLayout(null);
-		panel.add(btnDivisa);
+		pane.setLayout(null);
+		pane.add(btnCurrency);
 		
-		JButton btnTemperatura = new JButton("Temperatura");
-		btnTemperatura.setBounds(163, 2, 110, 26);
-		btnTemperatura.setForeground(Color.WHITE);
-		btnTemperatura.setBackground(new Color(0,0,0,150));
-		btnTemperatura.addActionListener(new ActionListener() {
+		JButton btnTemperature = new JButton("Temperatura");
+		btnTemperature.setBounds(163, 2, 110, 26);
+		btnTemperature.setForeground(Color.WHITE);
+		btnTemperature.setBackground(new Color(0,0,0,150));
+		btnTemperature.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[2].setVisible(true);
-				panelVisible = 2;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[2].setVisible(true);
+				paneVisible = 2;
 			}
 		});
-		panel.add(btnTemperatura);
+		pane.add(btnTemperature);
 		
-		JButton btnLongitud = new JButton("Longitud");
-		btnLongitud.setBounds(283, 2, 110, 26);
-		btnLongitud.setForeground(Color.WHITE);
-		btnLongitud.setBackground(new Color(0,0,0,150));
-		btnLongitud.addActionListener(new ActionListener() {
+		JButton btnLength = new JButton("Longitud");
+		btnLength.setBounds(283, 2, 110, 26);
+		btnLength.setForeground(Color.WHITE);
+		btnLength.setBackground(new Color(0,0,0,150));
+		btnLength.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[3].setVisible(true);
-				panelVisible = 3;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[3].setVisible(true);
+				paneVisible = 3;
 			}
 		});
-		panel.add(btnLongitud);
+		pane.add(btnLength);
 		
-		JButton btnMasa = new JButton("Masa");
-		btnMasa.setBounds(403, 2, 110, 26);
-		btnMasa.setForeground(Color.WHITE);
-		btnMasa.setBackground(new Color(0,0,0,150));
-		btnMasa.addActionListener(new ActionListener() {
+		JButton btnMass = new JButton("Masa");
+		btnMass.setBounds(403, 2, 110, 26);
+		btnMass.setForeground(Color.WHITE);
+		btnMass.setBackground(new Color(0,0,0,150));
+		btnMass.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[4].setVisible(true);
-				panelVisible = 4;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[4].setVisible(true);
+				paneVisible = 4;
 			}
 		});
-		panel.add(btnMasa);
+		pane.add(btnMass);
 		
-		JButton btnVolumen = new JButton("Volumen");
-		btnVolumen.setBounds(523, 2, 110, 26);
-		btnVolumen.setForeground(Color.WHITE);
-		btnVolumen.setBackground(new Color(0,0,0,150));
-		btnVolumen.addActionListener(new ActionListener() {
+		JButton btnVolume = new JButton("Volumen");
+		btnVolume.setBounds(523, 2, 110, 26);
+		btnVolume.setForeground(Color.WHITE);
+		btnVolume.setBackground(new Color(0,0,0,150));
+		btnVolume.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[5].setVisible(true);
-				panelVisible = 5;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[5].setVisible(true);
+				paneVisible = 5;
 			}
 		});
-		panel.add(btnVolumen);
+		pane.add(btnVolume);
 		
 		JButton btnByte = new JButton("Byte");
 		btnByte.setBounds(643, 2, 110, 26);
@@ -136,22 +136,22 @@ public class MainWindow {
 		btnByte.setBackground(new Color(0,0,0,150));
 		btnByte.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel_conversion[panelVisible].setVisible(false);
-				panel_conversion[6].setVisible(true);
-				panelVisible = 6;
+				pane_conversion[paneVisible].setVisible(false);
+				pane_conversion[6].setVisible(true);
+				paneVisible = 6;
 			}
 		});
-		panel.add(btnByte);
+		pane.add(btnByte);
 		
-		JPanel panelSuperior = new JPanel();
-		panelSuperior.addMouseListener(new MouseAdapter() {
+		JPanel paneTop = new JPanel();
+		paneTop.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				xMouse = e.getX();
 				yMouse = e.getY();
 			}
 		});
-		panelSuperior.addMouseMotionListener(new MouseMotionAdapter() {
+		paneTop.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
 				xDragged = e.getXOnScreen();
@@ -159,17 +159,17 @@ public class MainWindow {
 				frame.setLocation(xDragged-xMouse, yDragged-yMouse);
 			}
 		});
-		panelSuperior.setBackground(new Color(0, 0, 0));
-		panelSuperior.setForeground(new Color(255, 255, 255));
-		panelSuperior.setBounds(0, 0, 796, 24);
-		panelSuperior.setLayout(null);
+		paneTop.setBackground(new Color(0, 0, 0));
+		paneTop.setForeground(new Color(255, 255, 255));
+		paneTop.setBounds(0, 0, 796, 24);
+		paneTop.setLayout(null);
 		
-		JLabel lblTituloVentana = new JLabel("Conversor Alura");
-		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblTituloVentana.setHorizontalAlignment(SwingConstants.LEFT);
-		lblTituloVentana.setBounds(28, 0, 111, 24);
-		lblTituloVentana.setForeground(new Color(255, 255, 255));
-		panelSuperior.add(lblTituloVentana);
+		JLabel lblWindowTitle = new JLabel("Conversor Alura");
+		lblWindowTitle.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblWindowTitle.setHorizontalAlignment(SwingConstants.LEFT);
+		lblWindowTitle.setBounds(28, 0, 111, 24);
+		lblWindowTitle.setForeground(new Color(255, 255, 255));
+		paneTop.add(lblWindowTitle);
 		
 		JButton btnClose = new JButton("");
 		btnClose.setIcon(new ImageIcon(".\\resources\\images\\cross-item-list1.png"));
@@ -182,13 +182,13 @@ public class MainWindow {
 				System.exit(0);
 			}
 		});
-		panelSuperior.add(btnClose);
+		paneTop.add(btnClose);
 		
-		JLabel lblIconoAlura = new JLabel("");
-		lblIconoAlura.setHorizontalAlignment(SwingConstants.CENTER);
-		lblIconoAlura.setIcon(new ImageIcon(".\\resources\\images\\a1.png"));
-		lblIconoAlura.setBounds(0, 0, 30, 24);
-		panelSuperior.add(lblIconoAlura);
+		JLabel lblAluraIcon = new JLabel("");
+		lblAluraIcon.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAluraIcon.setIcon(new ImageIcon(".\\resources\\images\\a1.png"));
+		lblAluraIcon.setBounds(0, 0, 30, 24);
+		paneTop.add(lblAluraIcon);
 		
 		JButton btnMinimize = new JButton("");
 		btnMinimize.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -203,18 +203,18 @@ public class MainWindow {
 				
 			}
 		});
-		panelSuperior.add(btnMinimize);
+		paneTop.add(btnMinimize);
 		
 		frame.getContentPane().setLayout(null);
-		frame.getContentPane().add(panel);
-		frame.getContentPane().add(panelSuperior);
-		frame.getContentPane().add(panel_conversion[0]);
-		frame.getContentPane().add(panel_conversion[1]);
-		frame.getContentPane().add(panel_conversion[2]);
-		frame.getContentPane().add(panel_conversion[3]);
-		frame.getContentPane().add(panel_conversion[4]);
-		frame.getContentPane().add(panel_conversion[5]);
-		frame.getContentPane().add(panel_conversion[6]);
+		frame.getContentPane().add(pane);
+		frame.getContentPane().add(paneTop);
+		frame.getContentPane().add(pane_conversion[0]);
+		frame.getContentPane().add(pane_conversion[1]);
+		frame.getContentPane().add(pane_conversion[2]);
+		frame.getContentPane().add(pane_conversion[3]);
+		frame.getContentPane().add(pane_conversion[4]);
+		frame.getContentPane().add(pane_conversion[5]);
+		frame.getContentPane().add(pane_conversion[6]);
 		
 	}
 }
