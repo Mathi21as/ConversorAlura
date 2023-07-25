@@ -69,6 +69,21 @@
    correspondientes a su conversion, se oprime el boton "Convertir". Luego, debajo de
    la segunda lista de unidades aparecera el valor de la conversion.
 
+
+## Posible problema con Java
+Si al ejecutar el archivo ConversorAlura.jar y tiene instalado y configurado java pero 
+aun asi el programa no se ejecuta, como en mi caso, esto se soluciona de la siguiente manera:
+
+  1.  Cree un acceso directo del archivo ConversorAlura.jar
+  
+  2.  Haga click derecho en el acceso directo creado y en "Destino" al comienzo del contenido
+      del cuadro, fuera de las comillas, va a agregar el comando "javaw -jar " (sin las comillas)
+      como se muestra debajo:
+
+      
+
+  4.  Luego ejecute el acceso directo y vera que el programa se ejecuta correctamente
+
 ## Autor
 
 Este challenge/proyecto fue desarrollado por Mathias Ledesma. Cualquier problema que se 
