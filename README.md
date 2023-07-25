@@ -80,7 +80,9 @@ aun asi el programa no se ejecuta, como en mi caso, esto se soluciona de la sigu
       del cuadro, fuera de las comillas, va a agregar el comando "javaw -jar " (sin las comillas)
       como se muestra debajo:
 
-      
+      ![Agregar comando a acceso directo](https://raw.githubusercontent.com/Mathi21as/ConversorAlura/main/readmeimage.png)
+
+  3.  Haga click en "Aceptar"
 
   4.  Luego ejecute el acceso directo y vera que el programa se ejecuta correctamente
 
