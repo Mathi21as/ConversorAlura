@@ -76,9 +76,7 @@ aun asi el programa no se ejecuta, como en mi caso, esto se soluciona de la sigu
 
   1.  Cree un acceso directo del archivo ConversorAlura.jar
   
-  2.  Haga click derecho en el acceso directo creado y en "Destino" al comienzo del contenido
-      del cuadro, fuera de las comillas, va a agregar el comando "javaw -jar " (sin las comillas)
-      como se muestra debajo:
+  2.  Haga click derecho en el acceso directo creado, luego en "Propiedades" y en "Destino" al comienzo del contenido del cuadro, fuera de las comillas, va a agregar el comando "javaw -jar " (sin las comillas) como se muestra debajo:
 
       ![Agregar comando a acceso directo](https://raw.githubusercontent.com/Mathi21as/ConversorAlura/main/readmeimage.png)
 
