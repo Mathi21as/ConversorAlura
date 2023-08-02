@@ -25,13 +25,13 @@ public class LengthLogic {
 		switch(length) {
 			case "Metro" : return value;
 			
-			case "Pulgada": return Double.valueOf(value/inch);
+			case "Pulgada": return value/inch;
 			
-			case "Pie": return Double.valueOf(value/foot);
+			case "Pie": return value/foot;
 			
-			case "Yarda": return Double.valueOf(value/yard);
+			case "Yarda": return value/yard;
 			
-			case "Milla": return Double.valueOf(value/mile);
+			case "Milla": return value/mile;
 			
 			default: return null;
 		}
@@ -39,15 +39,15 @@ public class LengthLogic {
 	
 	public Double inchToOtherLength(String length, Double value) {
 		switch(length) {
-			case "Metro" : return Double.valueOf(value * inch);
+			case "Metro" : return value * inch;
 			
 			case "Pulgada": return value;
 			
-			case "Pie": return Double.valueOf((value*inch)/foot);
+			case "Pie": return (value*inch)/foot;
 			
-			case "Yarda": return Double.valueOf((value*inch)/yard);
+			case "Yarda": return (value*inch)/yard;
 			
-			case "Milla": return Double.valueOf((value*inch)/mile);
+			case "Milla": return (value*inch)/mile;
 			
 			default: return null;
 		}
@@ -57,13 +57,13 @@ public class LengthLogic {
 		switch(length) {
 			case "Metro" : return value * foot;
 			
-			case "Pulgada": return Double.valueOf((value*foot)/inch);
+			case "Pulgada": return (value*foot)/inch;
 			
 			case "Pie": return value;
 			
-			case "Yarda": return Double.valueOf((value*foot)/yard);
+			case "Yarda": return (value*foot)/yard;
 			
-			case "Milla": return Double.valueOf((value*foot)/mile);
+			case "Milla": return (value*foot)/mile;
 			
 			default: return null;
 		}
@@ -73,13 +73,13 @@ public class LengthLogic {
 		switch(length) {
 			case "Metro" : return value * yard;
 			
-			case "Pulgada": return Double.valueOf((value*yard)/inch);
+			case "Pulgada": return (value*yard)/inch;
 			
-			case "Pie": return Double.valueOf((value*yard)/foot);
+			case "Pie": return (value*yard)/foot;
 			
 			case "Yarda": return value;
 			
-			case "Milla": return Double.valueOf((value*yard)/mile);
+			case "Milla": return (value*yard)/mile;
 			
 			default: return null;
 		}

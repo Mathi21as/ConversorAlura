@@ -24,15 +24,15 @@ public class CurrencyLogic {
 	
 	public Double pesoToOtherCurrency(String currency, Double value) {
 		switch(currency) {
-			case "Dolar USD": return Double.valueOf(value/dolar);
+			case "Dolar USD": return value/dolar;
 				
-			case "Euro EUR": return Double.valueOf(value/euro);
+			case "Euro EUR": return value/euro;
 				
-			case "Libra Esterlina GBP": return Double.valueOf(value/libraEsterlina);
+			case "Libra Esterlina GBP": return value/libraEsterlina;
 				
-			case "Yen Japones JPY": return Double.valueOf(value/yen);
+			case "Yen Japones JPY": return value/yen;
 			
-			case "Won Coreano KRW": return Double.valueOf(value/won);
+			case "Won Coreano KRW": return value/won;
 			
 			case "Peso Argentino ARS": return value;
 		}
@@ -43,83 +43,83 @@ public class CurrencyLogic {
 		switch(currency) {
 			case "Dolar USD": return value;
 				
-			case "Euro EUR": return Double.valueOf((value*dolar)/euro);
+			case "Euro EUR": return (value*dolar)/euro;
 				
-			case "Libra Esterlina GBP": return Double.valueOf((value*dolar)/libraEsterlina);
+			case "Libra Esterlina GBP": return (value*dolar)/libraEsterlina;
 				
-			case "Yen Japones JPY": return Double.valueOf((value*dolar)/yen);
+			case "Yen Japones JPY": return (value*dolar)/yen;
 			
-			case "Won Coreano KRW": return Double.valueOf((value*dolar)/won);
+			case "Won Coreano KRW": return (value*dolar)/won;
 			
-			case "Peso Argentino ARS": return Double.valueOf(value*dolar);
+			case "Peso Argentino ARS": return value*dolar;
 		}
 		return null;
 	}
 	
 	public Double euroToOtherCurrency(String currency, Double value) {
 		switch(currency) {
-			case "Dolar USD": return Double.valueOf((value*euro)/dolar);
+			case "Dolar USD": return (value*euro)/dolar;
 				
 			case "Euro EUR": return value;
 				
-			case "Libra Esterlina GBP": return Double.valueOf((value*euro)/libraEsterlina);
+			case "Libra Esterlina GBP": return (value*euro)/libraEsterlina;
 				
-			case "Yen Japones JPY": return Double.valueOf((value*euro)/yen);
+			case "Yen Japones JPY": return (value*euro)/yen;
 			
-			case "Won Coreano KRW": return Double.valueOf((value*euro)/won);
+			case "Won Coreano KRW": return (value*euro)/won;
 			
-			case "Peso Argentino ARS": return Double.valueOf(value*euro);
+			case "Peso Argentino ARS": return value*euro;
 		}
 		return null;
 	}
 	
 	public Double libraToOtherCurrency(String currency, Double value) {
 		switch(currency) {
-			case "Dolar USD": return Double.valueOf((value*libraEsterlina)/dolar);
+			case "Dolar USD": return (value*libraEsterlina)/dolar;
 				
-			case "Euro EUR": return Double.valueOf((value*libraEsterlina)/euro);
+			case "Euro EUR": return (value*libraEsterlina)/euro;
 				
 			case "Libra Esterlina GBP": return value;
 				
-			case "Yen Japones JPY": return Double.valueOf((value*libraEsterlina)/yen);
+			case "Yen Japones JPY": return (value*libraEsterlina)/yen;
 			
-			case "Won Coreano KRW": return Double.valueOf((value*libraEsterlina)/won);
+			case "Won Coreano KRW": return (value*libraEsterlina)/won;
 			
-			case "Peso Argentino ARS": return Double.valueOf(value*libraEsterlina);
+			case "Peso Argentino ARS": return value*libraEsterlina;
 		}
 		return null;
 	}
 	
 	public Double yenToOtherCurrency(String currency, Double value) {
 		switch(currency) {
-			case "Dolar USD": return Double.valueOf((value*yen)/dolar);
+			case "Dolar USD": return (value*yen)/dolar;
 				
-			case "Euro EUR": return Double.valueOf((value*yen)/euro);
+			case "Euro EUR": return (value*yen)/euro;
 				
-			case "Libra Esterlina GBP": return Double.valueOf((value*yen)/libraEsterlina);
+			case "Libra Esterlina GBP": return (value*yen)/libraEsterlina;
 				
 			case "Yen Japones JPY": return value;
 			
-			case "Won Coreano KRW": return Double.valueOf((value*yen)/won);
+			case "Won Coreano KRW": return (value*yen)/won;
 			
-			case "Peso Argentino ARS": return Double.valueOf(value*yen);
+			case "Peso Argentino ARS": return value*yen;
 		}
 		return null;
 	}
 	
 	public Double wonToOtherCurrency(String currency, Double value) {
 		switch(currency) {
-			case "Dolar USD": return Double.valueOf((value*won)/dolar);
+			case "Dolar USD": return (value*won)/dolar;
 				
-			case "Euro EUR": return Double.valueOf((value*won)/euro);
+			case "Euro EUR": return (value*won)/euro;
 				
-			case "Libra Esterlina GBP": return Double.valueOf((value*won)/libraEsterlina);
+			case "Libra Esterlina GBP": return (value*won)/libraEsterlina;
 				
-			case "Yen Japones JPY": return Double.valueOf((value*won)/yen);
+			case "Yen Japones JPY": return (value*won)/yen;
 			
 			case "Won Coreano KRW": return value;
 			
-			case "Peso Argentino ARS": return Double.valueOf(value*won);
+			case "Peso Argentino ARS": return value*won;
 		}
 		return null;
 	}

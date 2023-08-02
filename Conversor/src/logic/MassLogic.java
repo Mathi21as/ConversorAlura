@@ -22,11 +22,11 @@ public class MassLogic {
 		switch(mass) {
 			case "Kilogramo": return value;
 			
-			case "Libra": return Double.valueOf(value / libra);
+			case "Libra": return value / libra;
 			
-			case "Onza": return Double.valueOf(value / ounce);
+			case "Onza": return value / ounce;
 			
-			case "Tonelada": return Double.valueOf(value / ton);
+			case "Tonelada": return value / ton;
 			
 			default: return null;
 		}
@@ -34,13 +34,13 @@ public class MassLogic {
 	
 	public Double libraToOtherWeight(String mass, Double value) {
 		switch(mass) {
-			case "Kilogramo": return Double.valueOf(value * libra);
+			case "Kilogramo": return value * libra;
 			
 			case "Libra": return value;
 			
-			case "Onza": return Double.valueOf((value * libra) / ounce);
+			case "Onza": return (value * libra) / ounce;
 			
-			case "Tonelada": return Double.valueOf((value * libra) / ton);
+			case "Tonelada": return (value * libra) / ton;
 			
 			default: return null;
 		}
@@ -48,13 +48,13 @@ public class MassLogic {
 	
 	public Double ounceToOtherWeight(String mass, Double value) {
 		switch(mass) {
-			case "Kilogramo": return Double.valueOf(value * ounce);
+			case "Kilogramo": return value * ounce;
 			
-			case "Libra": return Double.valueOf((value * ounce) / libra);
+			case "Libra": return (value * ounce) / libra;
 			
 			case "Onza": return value;
 			
-			case "Tonelada": return Double.valueOf((value * ounce) / ton);
+			case "Tonelada": return (value * ounce) / ton;
 			
 			default: return null;
 		}
@@ -62,11 +62,11 @@ public class MassLogic {
 	
 	public Double tonToOtherWeight(String mass, Double value) {
 		switch(mass) {
-			case "Kilogramo": return Double.valueOf(value * ton);
+			case "Kilogramo": return value * ton;
 			
-			case "Libra": return Double.valueOf((value * ton) / libra);
+			case "Libra": return (value * ton) / libra;
 			
-			case "Onza": return Double.valueOf((value * ton) / ounce);
+			case "Onza": return (value * ton) / ounce;
 			
 			case "Tonelada": return value;
 			

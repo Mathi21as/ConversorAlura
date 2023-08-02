@@ -40,7 +40,7 @@ public class TemperatureLogic {
 	
 	public Double kelvinToOtherTemperature(String temperature, Double value) {
 		switch(temperature) {
-			case "Celsius (°C)": return kelvin - value;
+			case "Celsius (°C)": return value - kelvin;
 			
 			case "Farenheit (°F)": return (value - kelvin) * 1.8 + 32;
 				
